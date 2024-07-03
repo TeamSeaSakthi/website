@@ -4869,4 +4869,8 @@ ul {
     .mobile-fix-opensource {
         padding-top: 0px !important;
     }
+
+    .mobile-fix-hide {
+        display: none;
+    }
 }
