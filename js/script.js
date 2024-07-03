@@ -235,7 +235,9 @@ $(document).ready(function () {
 
 
 
-
+function open_source() {
+    window.location.href = "https://kumaragurudtsteam-my.sharepoint.com/:f:/g/personal/jonattan_22ad_kct_ac_in/Ekzabbui-k1PrrkBmYQ8v8sBQ2Qsh3MNRayQvvGBpSZckw?e=ywUWiw"
+}
 
 
 

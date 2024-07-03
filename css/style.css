@@ -4865,4 +4865,8 @@ ul {
         top: 16% !important;
         color: white !important;
     }
+
+    .mobile-fix-opensource {
+        padding-top: 0px !important;
+    }
 }
