@@ -4924,7 +4924,7 @@ ul {
 
     .page-1-down-text .top .bullet {
         content: "";
-        position: relative;
+        position: absolute;
         left: -5px;
         top: 50%;
         width: 4px;
