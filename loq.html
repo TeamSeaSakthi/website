@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PRJ. YALI 2.1 - Hydrogen Fuel Boat</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+}
+  
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('/mnt/data/846bb24e-3787-4d5c-91dc-ba84fdca74a8.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+}
+  
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    text-align: left;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+  
+.subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+  
+.specs {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    border-left: 2px solid #fff;
+    padding-left: 2rem;
+}
+  
+.spec-group {
+    text-align: left;
+}
+  
+.spec-group strong {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+  
+.spec-value {
+    font-size: 1.2rem;
+}
+  
+.speed-circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 4px solid #d92e47;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #d92e47;
+    margin-left: 3rem;
+}
+  
+.btn-info {
+    background-color: #d92e47;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: background-color 0.3s ease;
+}
+  
+.btn-info:hover {
+    background-color: #a72435;
+}
+  
+  /* Navigation arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 2rem;
+    color: white;
+    z-index: 10;
+}
+  
+.nav-arrow.left {
+    left: 20px;
+}
+  
+.nav-arrow.right {
+    right: 20px;
+}
+  
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="overlay"></div>
+    
+    <div class="nav-arrow left">&#8592;</div>
+    <div class="nav-arrow right">&#8594;</div>
+    
+    <div class="content">
+    <h1 class="title">PRJ. YALI - 2.1 <br/> 2025, IN</h1>
+    <p class="subtitle">HYDROGEN FUEL</p>
+    <div class="specs">
+        <div class="spec-group">
+        <strong>Engine</strong>
+        <span class="spec-value">Single Prop</span>
+        <strong>Weight</strong>
+        <span class="spec-value">240 KGS</span>
+    </div>
+    <div class="speed-circle" title="Max Speed">16</div>
+    </div>
+    <button class="btn-info">More Info</button>
+</div>
+</div>
+
+</body>
+</html>

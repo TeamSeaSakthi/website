@@ -224,6 +224,42 @@ $(document).ready(function () {
     });
 });
 
+<<<<<<< HEAD
+=======
+const imageData = {
+    "2023": ["1.jpg", "2.jpg", "3.jpg"],
+    "2024": ["1.jpg", "2.jpg", "3.jpg"]
+};
+
+const currentIndex = {
+    "2023": 0,
+    "2024": 0
+};
+
+function showGallery(year) {
+    document.getElementById("gallery-2023").style.display = "none";
+    document.getElementById("gallery-2024").style.display = "none";
+    document.getElementById(`gallery-${year}`).style.display = "block";
+    updateImage(year);
+}
+
+function updateImage(year) {
+    const imgElement = document.querySelector(`#gallery-${year} .gallery-image`);
+    imgElement.src = `./gallery/${year}/${imageData[year][currentIndex[year]]}`;
+}
+
+function nextImage(year) {
+    currentIndex[year] = (currentIndex[year] + 1) % imageData[year].length;
+    updateImage(year);
+}
+
+function prevImage(year) {
+ currentIndex[year] = (currentIndex[year] - 1 + imageData[year].length) % imageData[year].length;
+  updateImage(year);
+}
+
+
+>>>>>>> 6eec9ae (first commit)
 
 
 
@@ -296,6 +332,10 @@ MicroModal.init({
     awaitCloseAnimation: true, debugMode: true
 });
 
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> 6eec9ae (first commit)
 // Click a button automatically on start after 0.5 seconds
 setTimeout(function () {
     document.getElementById("crowdfunding-btn").click();
@@ -305,7 +345,11 @@ setTimeout(function () {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
 }*/
+<<<<<<< HEAD
 
+=======
+/*
+>>>>>>> 6eec9ae (first commit)
 document.getElementById("do-crowdfund").addEventListener('pointerdown', function () {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
@@ -320,7 +364,11 @@ document.getElementById("read-more-btn").onclick = function () {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
 }*/
+<<<<<<< HEAD
 
+=======
+/*
+>>>>>>> 6eec9ae (first commit)
 function open_milaap() {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
@@ -415,7 +463,11 @@ function CountDownTimer(dt, id) {
 
 }
 
+<<<<<<< HEAD
 CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');
+=======
+CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');*/
+>>>>>>> 6eec9ae (first commit)
 
 /*
 (function () {
@@ -434,7 +486,11 @@ CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');
     keyframes = `@keyframes scroll-marquee {
     0% {transform:translate3d(${totalWidth}px,0px,0px);}
     100% {transform:translate3d(0px,0px,0px);}
+<<<<<<< HEAD
   }`;
+=======
+};
+>>>>>>> 6eec9ae (first commit)
 
     style = document.createElement('style');
 
@@ -466,4 +522,100 @@ CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');
 
 }).call(this); */
 
+<<<<<<< HEAD
 baguetteBox.run('.tz-gallery');
+=======
+baguetteBox.run('.tz-gallery');
+document.addEventListener('DOMContentLoaded', () => {
+    const teamText = document.getElementById('teamText');
+    const yaliContainer = document.getElementById('yaliContainer');
+    const yaliNumber = document.getElementById('yaliNumber');
+    const tamilYali = document.getElementById('tamilYali');
+    const introContainer = document.querySelector('.intro-container');
+    const mainContent = document.getElementById('mainContent');
+
+    const fullText = 'Team Sea Sakthi';
+    let currentIndex = 0;
+
+    // Type out team text
+    const typeText = () => {
+        if (currentIndex < fullText.length) {
+            teamText.textContent = fullText.substring(0, currentIndex + 1);
+            currentIndex++;
+            setTimeout(typeText, 100);
+        } else {
+            // Fade out team text after typing
+            setTimeout(() => {
+                teamText.classList.add('fade-out');
+                setTimeout(() => {
+                    teamText.style.display = 'none';
+                    showYali();
+                }, 500);
+            }, 500);
+        }
+    };
+
+    // Show YALI with changing numbers
+    const showYali = () => {
+        yaliContainer.classList.remove('hidden');
+        yaliContainer.classList.add('visible');
+        
+        let count = 1;
+        const numberInterval = setInterval(() => {
+            count++;
+            yaliNumber.textContent = count + '.0';
+            
+            if (count >= 4) {
+                clearInterval(numberInterval);
+                setTimeout(() => {
+                    yaliContainer.classList.add('fade-out');
+                    setTimeout(() => {
+                        yaliContainer.style.display = 'none';
+                        showTamilYali();
+                    }, 500);
+                }, 500);
+            }
+        }, 500);
+    };
+
+    // Show Tamil YALI and slide out
+    const showTamilYali = () => {
+        tamilYali.classList.remove('hidden');
+        tamilYali.classList.add('visible');
+        
+        setTimeout(() => {
+            introContainer.classList.add('slide-out');
+            setTimeout(() => {
+                introContainer.style.display = 'none';
+                mainContent.classList.remove('hidden');
+            }, 1000);
+        }, 1500);
+    };
+
+    // Start the sequence
+    typeText();
+});
+
+// On batch button click, show corresponding alumni list
+document.querySelectorAll('.batch-btn').forEach(button => {
+    button.addEventListener('click', () => {
+    // Remove active from all buttons
+    document.querySelectorAll('.batch-btn').forEach(btn => btn.classList.remove('active'));
+
+    // Hide all batch containers
+    document.querySelectorAll('.batch-container').forEach(container => container.style.display = 'none');
+
+    // Show selected batch container
+    const batch = button.getAttribute('data-batch');
+    document.getElementById(batch).style.display = 'block';
+
+    // Set this button active
+    button.classList.add('active');
+});
+});
+
+
+
+
+
+>>>>>>> 6eec9ae (first commit)
