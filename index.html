@@ -11,7 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Sea Sakthi - Intro Sequence</title>
     <link rel="stylesheet" href="styles.css">
+<<<<<<< HEAD
 >>>>>>> 6eec9ae (first commit)
+=======
+    <title>YALI 4.0 - Advanced Marine Innovation</title>
+    <link rel="stylesheet" href="styles.css">
+>>>>>>> 964364b (update)
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -67,6 +72,7 @@
                     <li class="nav-item delay-4"><a class="nav-link" onclick="navto('featurepage')">OUR FEATURES</a>
                     </li>
                     <li class="nav-item delay-5"><a class="nav-link" onclick="navto('editionpage')">EDITONS</a></li>
+                    <li class="nav-item delay-5"><a class="nav-link" onclick="navto('projectspage')">OUR PROJECTS</a></li>
                     <li class="nav-item delay-6"><a class="nav-link" onclick="navto('teampage')">OUR TEAM</a></li>
                     <li class="nav-item delay-7"><a class="nav-link" onclick="navto('gallerypage')">GALLERY</a></li>
                     <li class="nav-item delay-8"><a class="nav-link" onclick="navto('articlespage')">ARTICLES</a></li>
@@ -243,9 +249,9 @@
                     <p>
                         Team Sea Sakthi proudly represents India as the first and only team to participate in the
                         prestigious Monaco Energy Boat Challenge. Comprising a dedicated 13-member crew, this innovative
-                        team has engineered a remarkable vessel: Yali 0.1, the nation’s first energy boat.
+                        team has engineered a remarkable vessel: Yali 1.0, the nation’s first energy boat.
                         <br><br>
-                        Yali 0.1 is a testament to cutting-edge technology and sustainable design, featuring:
+                        Yali 1.0 is a testament to cutting-edge technology and sustainable design, featuring:
                         <br><br>
                         Aluminium Fabricated Cockpit
                         400W Solar Panel as Secondary Power Source
@@ -377,8 +383,8 @@
 
     <div class="pages" id="landingpage">
         <div class="page-1-background">
-            <img class="full-screen page-1-video" src="./assets/landing.jpg">
-            </img>
+            <video class="full-screen page-1-video" src="./assets/landing.mov"autoplay muted loop playsinline>
+            </video>
         </div>
 
         <div class="page-1-down-text">
@@ -497,81 +503,121 @@
     </div> -->
 
     <div class="pages institution" style="height: fit-content;" id="institutionpage">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-12 col-lg-6">
-                    <img src="./assets/institution.jpg" class="d-block img-fluid rounded" alt="Bootstrap Themes"
-                        width="700" height="500" loading="lazy">
+        <div class="institution-section">
+            <div class="institution-container">
+                <div class="institution-content">
+                    <div class="text-content">
+                        <h1 class="institution-title fade-in">Kumaraguru Institutions</h1>
+                        <div class="title-underline slide-in"></div>
+                        <p class="institution-description fade-in-delay">
+                            For forty years, Kumaraguru Institutions have promoted scientific thinking,
+                            analysis, and inquiry in education, research, and innovation. Committed to technology
+                            for ecological resilience, we champion sustainability, poised to make a significant
+                            positive impact on the environment.
+                        </p>
+                        <a href="https://kct.ac.in" target="_blank" class="learn-more-btn fade-in-delay-2">
+                            <span>Learn More</span>
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3 py-4 text-start">Kumaraguru Institutions</h1>
-                    <p class="lead text-start">For forty years, Kumaraguru Institutions have promoted scientific
-                        thinking,
-                        analysis, and inquiry in education, research, and innovation. Committed to technology
-                        for ecological resilience, we champion sustainability, poised to make a significant
-                        positive impact on the environment.
-                    </p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a type="button" class="btn btn-secondary btn-lg px-4 me-md-2 white-black"
-                            href="https://kct.ac.in" target="_blank">Learn More</a>
+                <div class="institution-image-container fade-in-right">
+                    <div class="image-frame">
+                        <img src="./assets/institution.jpg" alt="Kumaraguru Institutions Campus" class="institution-image">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <script src="scripts.js"></script>
+
+    <!-- MEBC Introduction Section -->
+    <div class="pages mebc bg-dark text-white" style="height: fit-content;" id="mebcpage">
+        <div class="mebc-page">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="image-section">
+                        <img src="./assets/2024/photo9.jpg" alt="Monaco Energy Boat Challenge">
+                    </div>
+                    <div class="text-section">
+                        <h1>Monaco Energy Boat<br>Challenge (MEBC)</h1>
+                        <p>
+                            The Monaco Energy Boat Challenge is a globally recognized competition that brings together the brightest student
+                            innovators in sustainable marine mobility. Organized by the Yacht Club de Monaco, the event challenges teams to design
+                            and race clean energy-powered boats. Team Sea Sakthi proudly represents India for the third consecutive year, showcasing
+                            cutting-edge innovation, green engineering, and a strong commitment to sustainable maritime technology.
+                        </p>
+                        <div class="countdown-section">
+                            <h2>The Race to Monaco Begins In</h2>
+                            <div class="countdown">
+                                <div class="time-box">
+                                    <span id="days">00</span>
+                                    <span class="label">DAYS</span>
+                                </div>
+                                <span class="colon">:</span>
+                                <div class="time-box">
+                                    <span id="hours">00</span>
+                                    <span class="label">HOURS</span>
+                                </div>
+                                <span class="colon">:</span>
+                                <div class="time-box">
+                                    <span id="minutes">00</span>
+                                    <span class="label">MINUTES</span>
+                                </div>
+                                <span class="colon">:</span>
+                                <div class="time-box">
+                                    <span id="seconds">00</span>
+                                    <span class="label">SECONDS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta">
+                            <a href="https://energyboatchallenge.com/" target="_blank" class="learn-more">
+                                Learn More ⚓
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
 
     <div class="pages who-are-we" style="height: max-content;" id="aboutpage">
         <!-- About 1 - Bootstrap Brain Component -->
-        <section class="py-3 py-md-5">
-            <div class="container">
-                <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-                    <div class="col-12 col-lg-6 col-xl-5">
-                        <img class="img-fluid rounded" loading="lazy" src="./assets/pineapple.png" alt="About 1">
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-image-container fade-in">
+                    <div class="image-frame">
+                        <img src="./assets/2024/photo5.jpg" alt="Team Sea Sakthi" class="about-image">
                     </div>
-                    <div class="col-12 col-lg-6 col-xl-7 top-gap">
-                        <div class="row justify-content-xl-center">
-                            <div class="col-12 col-xl-11">
-                                <h2 class="mb-3 py-4">Who Are We?</h2>
-                                <p class="lead fs-4 primary mb-3">Team Sea Sakthi is excited to participate in
-                                    the prestigious Monaco Energy Boat Challenge 2024 as the official team representing
-                                    our institution. Our team comprises of 10 passionate students who are dedicated to
-                                    developing a unique hybrid boat concept.</p>
-                                <div class="row gy-4 gy-md-0 gx-xxl-5X">
-                                    <div class="col-12 col-md-6">
-                                        <div class="d-flex">
-                                            <div class="me-4 text-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                    fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h2 class="h4 mb-3">Mission</h2>
-                                                <p class="primary mb-0">To induce a revolution of electric
-                                                    mobility in the maritime sector by in corporating concepts of
-                                                    cleaner technologies. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="d-flex">
-                                            <div class="me-4 text-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                    fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h2 class="h4 mb-3">Vision</h2>
-                                                <p class="primary mb-0">To establish a maritime sector that is
-                                                    environmentally sustainable.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="about-title fade-in">Who Are We?</h2>
+                    <div class="title-underline slide-in"></div>
+                    <p class="about-description fade-in-delay">
+                        Team Sea Sakthi is excited to participate in the prestigious Monaco Energy Boat Challenge 2024 as the official team representing our institution. Our team comprises of 10 passionate students who are dedicated to developing a unique hybrid boat concept.
+                    </p>
+                    <div class="features-grid fade-in-delay-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Mission</h3>
+                                <p>To induce a revolution of electric mobility in the maritime sector by incorporating concepts of cleaner technologies.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Vision</h3>
+                                <p>To establish a maritime sector that is environmentally sustainable.
+
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -580,81 +626,39 @@
         </section>
     </div>
 
+    
+
     <div class="pages features" style="height: max-content;" id="featurepage">
-        <section class="feature-section img-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center heading-main heading-main-white">
-                        <h2 class="heading">YALI 3.0 FEATURES</h2>
-                        <div class="separator"><i class="fa fa-home below-line-about-icon"></i></div>
+        <section class="hero">
+        <div class="yali-creatures">
+            <div class="yali left"></div>
+            <div class="yali right"></div>
+        </div>
+        
+        <div class="content">
+            <h1 class="title">YALI 4.0</h1>
+            <div class="divider"></div>
+            <p class="description">
+                Elevating marine innovation with a bespoke 15 kW axial flux motor, delivering precise, high-efficiency propulsion. Its advanced Balsa-Flax composite cockpit merges lightweight strength with sustainable resilience. Cutting-edge AR Glasses provide pilots with comprehensive 360° awareness and real-time insights, while an IP67-rated PDU featuring HVIL and IRM technology streamlines power management, reduces wiring complexity by 60%, and enhances safety—defining a new pinnacle of intelligent, eco-conscious marine performance.
+            </p>
+            <button class="scroll-button" aria-label="Scroll to features">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6"/>
+                </svg>
+            </button>
+        </div>
+    </section>
 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 feature-back">
-                        <div class="features-div">
-                            <i class="fa fa-battery-full"></i>
-                            <h2 class="features-heading">Indigenous battery</h2>
-                            <p>Designed for high performance under heavy current loads.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 feature-back">
-                        <div class="features-div">
-                            <i class="fa fa-leaf"></i>
+    <section id="features" class="features">
+        <div class="features-header">
+            <h2>YALI 4.0 FEATURES</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="features-grid" id="featuresGrid"></div>
+    </section>
 
-                            <h2 class="features-heading">Pineapple Fibre</h2>
-                            <p>
-                                Pineapple fibres are entirely natural and have high strength to weight ratio, and have
-                                excellent buoyancy properties.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 feature-back">
-                        <div class="features-div">
-                            <i class="fa fa-check-square"></i>
-                            <h2 class="features-heading">Upcycled Plastic Seat</h2>
-                            <p>Our upcycled plastic seat is made from recycled plastics, offering durability and comfort
-                                while promoting environmental sustainability.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 feature-back">
-                        <div class="features-div">
-                            <i class="fa fa-flag-checkered"></i>
-                            <h2 class="features-heading">Dual Propulsion</h2>
-                            <p>
-                                Our boat features dual propulsion powered by a homemade battery supplying 2 x 6.5 kW
-                                motors, ensuring efficient and eco-friendly performance
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 feature-back">
-                        <div class="features-div">
-                            <i class="fa fa-laptop"></i>
-                            <h2 class="features-heading">Yacht Os</h2>
-                            <p>
-                                Yacht OS enhances navigation with intuitive controls and real-time analytics, optimizing
-                                route planning and energy use.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 feature-back">
-                        <div class="features-div">
-                            <i class="fa fa-medkit"></i>
-                            <h2 class="features-heading">Biometric Performance</h2>
-                            <p>
-                                Our biometric system monitors pilots vital signs in real-time to ensure safety and
-                                optimize performance.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+    <script src="script.js"></script>
 
     <!--
     <div class="pages introduce" style="height: 200vh; overflow: unset;">
@@ -694,7 +698,7 @@
             </div>
         </div>
     </div> -->
-
+</div>
     <div class="pages about editions" id="editionpage" style="height: max-content;">
         <h2 class="page-title">Previous Editions</h2>
         <div class="versions">
@@ -707,6 +711,9 @@
 
 
                     <div class="product-img">
+                        <div class="product-img__item" id="img3">
+                            <img src="./assets/yali3.png" alt="star wars" class="product-img__img">
+                        </div>
                         <div class="product-img__item" id="img1">
                             <img src="./assets/yali2.png" alt="star wars" class="product-img__img">
                         </div>
@@ -734,6 +741,71 @@
                         </button>
 
                         <div class="product-slider__wrp swiper-wrapper">
+                            <div class="product-slider__item swiper-slide" data-target="img3">
+                                <div class="product-slider__card">
+                                    <img src="./assets/pictures/photo7.jpg" alt="star wars"
+                                        class="product-slider__cover">
+                                    <div class="product-slider__content">
+                                        <h1 class="product-slider__title">
+                                            PRJ. YALI - 3.0 <br> 2024, IN
+                                        </h1>
+                                        <span class="product-slider__price">ECO-FRIEDNLY</span>
+                                        <div class="product-ctr">
+                                            <div class="product-labels">
+                                                <div class="product-labels__title">ENGINE</div>
+
+                                                <div class="product-labels__group">
+                                                    <span class="product-labels__txt">DUO PROP</span>
+                                                </div>
+
+                                                <div class="product-labels__title">WEIGHT</div>
+
+                                                <div class="product-labels__group">
+                                                    <span class="product-labels__txt">260 KGS</span>
+                                                </div>
+
+                                            </div>
+
+                                            <span class="hr-vertical"></span>
+
+                                            <div class="product-inf">
+                                                <div class="product-inf__percent">
+                                                    <div class="product-inf__percent-circle">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                                                            viewBox="0 0 100 100">
+                                                            <defs>
+                                                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%"
+                                                                    y2="100%">
+                                                                    <stop offset="0%" stop-color="#0c1e2c"
+                                                                        stop-opacity="0" />
+                                                                    <stop offset="100%" stop-color="#cb2240"
+                                                                        stop-opacity="1" />
+                                                                </linearGradient>
+                                                            </defs>
+                                                            <circle cx="50" cy="50" r="47" stroke-dasharray="220, 300"
+                                                                stroke="#cb2240" stroke-width="4" fill="none" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="product-inf__percent-txt">
+                                                        16
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-inf__title">MAX SPEED</span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-slider__bottom">
+                                            <button class="product-slider__cart" data-micromodal-trigger="modal-yali-3">
+                                                INFO
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
                             <div class="product-slider__item swiper-slide" data-target="img1">
                                 <div class="product-slider__card">
                                     <img src="./assets/pictures/monaco_Drive.jpg" alt="star wars"
@@ -878,8 +950,7 @@
                 </path>
             </symbol>
         </svg>
-    </div>
-
+  
 
 
     <!--
@@ -983,6 +1054,7 @@
 
 
     <div class="about team-page" id="teampage">
+<<<<<<< HEAD
         <h2 class="page-title">Our Team</h2>
         <section class="section-team">
             <div class="container">
@@ -1615,6 +1687,34 @@
 =======
 
 >>>>>>> 6eec9ae (first commit)
+=======
+        <h2 class="page-title"></h2>
+        <div class="team-container">
+        <div class="team-wrapper">
+            <!-- Header Section -->
+            <div class="header-section">
+                <div class="header-title">
+                    <svg class="team-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h1>OUR TEAM</h1>
+                </div>
+                <div class="header-divider"></div>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="team-grid" id="teamGrid">
+                <!-- Team members will be populated by JavaScript -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="team.js"></script>
+>>>>>>> 964364b (update)
                 </div>
             </div>
         </section>
@@ -1683,37 +1783,54 @@
 =======
     
 
-    <div class="pages gallery" id="gallerypage">
+    <div class="pages" id="gallerypage">
         <h2 class="page-title">Gallery</h2>
-        <div class="container gallery-container">
 
-    <!-- Year Selector -->
-    <div class="year-selector">
-        <button onclick="showGallery('2023')">2023</button>
-        <button onclick="showGallery('2024')">2024</button>
-    </div>
-
-    <!-- 2023 Gallery -->
-    <div class="year-gallery" id="gallery-2023">
-        <img class="gallery-image" src="./gallery/2023/1.jpg" alt="2023 Image" />
-    <div class="nav-buttons">
-        <button onclick="prevImage('2023')">Previous</button>
-        <button onclick="nextImage('2023')">Next</button>
-        </div>
+    <div class="switch-buttons">
+        <button onclick="showGallery('gallery2024')">2024 Gallery</button>
+        <button onclick="showGallery('gallery2023')">2023 Gallery</button>
     </div>
 
     <!-- 2024 Gallery -->
-    <div class="year-gallery" id="gallery-2024" style="display: none;">
-        <img class="gallery-image" src="./gallery/2024/1.jpg" alt="2024 Image" />
-        <div class="nav-buttons">
-        <button onclick="prevImage('2024')">Previous</button>
-        <button onclick="nextImage('2024')">Next</button>
-    </div>
+    <div id="gallery2024" class="gallery-container">
+        <div class="gallery-grid">
+            <div class="gallery-item landscape"><img src="./assets/2024/photo1.JPG" alt="2024 Photo 1"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo2.JPG" alt="2024 Photo 2"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo5.JPG" alt="2024 Photo 3"></div>
+            <div class="gallery-item portrait"><img src="./assets/2024/photo9.JPG" alt="2024 Portrait"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo8.JPG" alt="2024 Photo 4"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo11.JPG" alt="2024 Photo 5"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo12.JPG" alt="2024 Photo 6"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo13.JPG" alt="2024 Photo 7"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo3.JPG" alt="2024 Photo 8"></div>
+            <div class="gallery-item landscape"><img src="./assets/2024/photo1.JPG" alt="2024 Photo 9"></div>
+
+        </div>
     </div>
 
+<<<<<<< HEAD
 </div>
 </div>
 >>>>>>> 6eec9ae (first commit)
+=======
+    <!-- 2023 Gallery -->
+    <div id="gallery2023" class="gallery-container hidden">
+        <div class="grid-three-cols">
+            <img src="./assets/2023/1.jpg" alt="2023 Photo 1">
+            <img src="./assets/2023/2.jpg" alt="2023 Photo 2">
+            <img src="./assets/2023/3.jpg" alt="2023 Photo 3">
+            <img src="./assets/2023/4.jpg" alt="2023 Photo 4">
+            <img src="./assets/2023/8.jpg" alt="2023 Photo 5">
+            <img src="./assets/2023/6.jpg" alt="2023 Photo 6">
+            <img src="./assets/2023/7.jpg" alt="2023 Photo 7">
+            <img src="./assets/2023/9.jpg" alt="2023 Photo 8">
+            <img src="./assets/2023/5.jpg" alt="2023 Photo 9">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+>>>>>>> 964364b (update)
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
         <script>
@@ -1767,16 +1884,16 @@
                 <div class="blog-header">
                     <div class="blog-article header-article">
                         <div class="blog-big__title"><span class="onlymobile">Eco&nbsp; </span>Boat</div>
-                        <div class="blog-menu small-title date">12.06.2021</div>
+                        <div class="blog-menu small-title date">12.06.2025</div>
                     </div>
                     <div class="blog-article">
-                        <img src="./assets/pictures/news3.webp" alt="">
+                        <img src="./assets/members/group.jpg" alt="">
                         <h2>Team <span>'Sea Sakthi'</span> of Kumaraguru College of Technology</h2>
                         <div class="blog-detail">
                             <span>By The Hindu</span>
                             <span>5 Min Read</span>
                         </div>
-                        <p>The 12-member team is all set to travel to Europe for the one-of-a-kind motor boating event
+                        <p>The 16-member team is all set to travel to Europe for the one-of-a-kind motor boating event
                             dedicated to promoting a sustainable future through alternative energy sources.</p>
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
@@ -1792,17 +1909,17 @@
                 <div class="blog-header">
                     <div class="blog-article header-article">
                         <div class="blog-big__title"><span class="onlymobile">Eco &nbsp; </span>Friendly</div>
-                        <div class="blog-menu small-title date">12.06.2021</div>
+                        <div class="blog-menu small-title date">12.06.2025</div>
                     </div>
                     <div class="blog-article">
-                        <img src="./assets/pictures/news2.webp" alt="">
+                        <img src="./assets/pictures/news3.webp" alt="">
                         <h2>Kumaraguru's Team Sea Sakthi is all set to race at Monaco with their Energy Boat</h2>
                         <div class="blog-detail">
                             <span>By YourCoimbatore</span>
                             <span>5 Min Read</span>
                         </div>
-                        <p>A Team of 12 students from Kumaraguru College of Technology (KCT) Coimbatore are all set to
-                            travel to Monaco in Europe to take part in the Monaco Energy Boat Challenge 2024</p>
+                        <p>A Team of 16 students from Kumaraguru College of Technology (KCT) Coimbatore are all set to
+                            travel to Monaco in Europe to take part in the Monaco Energy Boat Challenge 2025</p>
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right"
@@ -1817,7 +1934,7 @@
                 <div class="blog-header">
                     <div class="blog-article header-article">
                         <div class="blog-big__title"><span class="onlymobile">Infinite &nbsp; </span>Savings</div>
-                        <div class="blog-menu small-title date">12.06.2021</div>
+                        <div class="blog-menu small-title date">12.06.2025</div>
                     </div>
                     <div class="blog-article">
                         <img src="./assets/pictures/news1.webp" alt="">
@@ -1826,9 +1943,9 @@
                             <span>By Times Of India</span>
                             <span>5 Min Read</span>
                         </div>
-                        <p>COIMBATORE: City corporation commissioner M Prathap from INS Agrani unveiled Yali 2.0, a boat
+                        <p>COIMBATORE: Director of Centre for Indigenisation & Self Reliance (CISR),Indian Navy Cmde.B Balasundram unveiled Yali 4.0, a boat
                             designed by a team of students form Kumaraguru College of Technology, at the college campus
-                            in the city on Thursday.</p>
+                            in the city on Wednesday.</p>
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right"
@@ -1843,9 +1960,9 @@
             </div>
             <div class="blog-part right-blog">
                 <marquee width="100%" direction="left">
-                    <span>Yali 3.0 on launch at 20 May</span>
-                    <span>Pineapple Fibre - Moving Towards Sustainability</span>
-                    <span>India's 1st Hydrogen Fuel Boat</span>
+                    <span>Yali 4.0 launching on 4 jun</span>
+                    <span>Balsa and Flax- Moving Towards Sustainability</span>
+                    <span>Only Indian team to participate</span>
                 </marquee>
                 <div class="blog-right-title-container">
                     <div class="blog-right-title">
@@ -1857,16 +1974,15 @@
                     <div class="blog-right-container">
                         <div class="blog-title-date">
                             <div class="blog-right-page">1</div>
-                            <div class="date">28.04.2023</div>
+                            <div class="date">08.06.2025</div>
                         </div>
                         <div class="blog-right-page-title">Boat designed by Coimbatore college students</div>
-                        <div class="blog-right-page-subtitle">City corporation commissioner M Prathap and captain PK
-                            Prakash from INS Agrani...</div>
+                        <div class="blog-right-page-subtitle">Director of Centre for Indigenisation & Self Reliance (CISR),Indian Navy Cmde.B Balasundram </div>
                     </div>
                     <div class="blog-right-container">
                         <div class="blog-title-date">
                             <div class="blog-right-page">2</div>
-                            <div class="date">04.07.2022</div>
+                            <div class="date">04.06.2025</div>
                         </div>
                         <div class="blog-right-page-title">Two men and a boat, India’s Team Sea Sakthi races in Monaco
                             but for a local cause</div>
@@ -1879,19 +1995,19 @@
                             <div class="blog-right-page">3</div>
                             <div class="date">02.06.2024</div>
                         </div>
-                        <div class="blog-right-page-title">Team Sea Sakthi from India set to participate in 11th Monaco
+                        <div class="blog-right-page-title">Team Sea Sakthi from India set to participate in 12th Monaco
                             Energy Boat Challenge</div>
-                        <div class="blog-right-page-subtitle">Sea Sakthi, a 15-member contingent from Kumaraguru College
+                        <div class="blog-right-page-subtitle">Sea Sakthi, a 16-member contingent from Kumaraguru College
                             of Technology (KCT), Coimbatore, India, will participate in the 11th Monaco...</div>
                     </div>
                     <div class="blog-right-container">
                         <div class="blog-title-date">
                             <div class="blog-right-page">4</div>
-                            <div class="date">10.05.2022</div>
+                            <div class="date">10.05.2025</div>
                         </div>
                         <div class="blog-right-page-title">Team Sea Sakthi of Kumaraguru, the first ever Indian student
                             team at the International</div>
-                        <div class="blog-right-page-subtitle">14 students from Kumaraguru College of Technology (KCT),
+                        <div class="blog-right-page-subtitle">16 students from Kumaraguru College of Technology (KCT),
                             Coimbatore aligning with the future-forward vision to promote alternate propulsion system in
                             maritime mobility are...</div>
                     </div>
@@ -1899,6 +2015,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
@@ -1910,155 +2027,119 @@
             <button class="batch-btn" data-batch="yali2">Yali 2.0 Members</button>
             <button class="batch-btn" data-batch="yali3">Yali 3.0 Members</button>
     </div>
+=======
+>>>>>>> 964364b (update)
 
-<!-- Alumni lists -->
-<div class="batch-container" id="yali1" style="display: block;">
-    <div class="alumni-list">
-        <div class="alumni-card">
-            <img src="./assets/alumni/yali1_member1.jpg" alt="Alumni 1" />
-            <h3>Mohan R</h3>
-            <p>Bosch</p>
-            <a href="https://www.linkedin.com/in/mohan-ravi/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-            <img src="./assets/alumni/yali1_member2.jpg" alt="Alumni 2" />
-            <h3>Kishore krisna S</h3>
-            <p>Cameron</p>
-            <a href="https://www.linkedin.com/in/kishore-krisna-s-b9818a1b8/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-            <img src="./assets/alumni/yali1_member3.jpg" alt="Alumni 2" />
-            <h3>Manav R Samant</h3>
-            <p>Shell</p>
-            <a href="https://www.linkedin.com/in/manavsamant/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-                <div class="alumni-card">
-            <img src="./assets/alumni/yali1_member4.jpg" alt="Alumni 2" />
-            <h3>Vekash S</h3>
-            <p>Aivar Innovations</p>
-            <a href="https://www.linkedin.com/in/vekash-s-148068162/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-            <img src="./assets/alumni/yali1_member5.jpg" alt="Alumni 2" />
-            <h3>Barathraj M</h3>
-            <p>Quindl Technologies</p>
-            <a href="https://www.linkedin.com/in/bharathraj-m/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-            <img src="./assets/alumni/yali1_member2.jpg" alt="Alumni 2" />
-            <h3>Sanaa M</h3>
-            <p>UCL-London</p>
-            <a href="https://www.linkedin.com/in/sanaa-m-a52b7119b/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-<!-- Add more alumni here -->
-</div>
-</div>
-<div class="batch-container" id="yali2" style="display: none;">
-    <div class="alumni-list">
-        <div class="alumni-card">
-            <img src="./assets/alumni/yali2_member1.jpg" alt="Alumni 1" />
-            <h3>Gerontius Leo L</h3>
-            <p>Chalmers University</p>
-            <a href="https://www.linkedin.com/in/gerontius-leo-l-61b938171/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-        <img src="./assets/alumni/yali2_member2.jpg" alt="Alumni 1" />
-            <h3>Anjana Prasad</h3>
-            <p>Collins Aerospace</p>
-            <a href="https://www.linkedin.com/in/anjana-prasad3101/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-        <img src="./assets/alumni/yali2_member3.jpg" alt="Alumni 1" />
-            <h3>Anandh B</h3>
-            <p>KTH Royal Institute-Stockholm</p>
-            <a href="https://www.linkedin.com/in/anandh-balasubramani/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-        <img src="./assets/alumni/yali2_member4.jpg" alt="Alumni 1" />
-            <h3>vikash S</h3>
-            <p>Hochschule Stralsund-Germany</p>
-            <a href="https://www.linkedin.com/in/vikash-sakthivel-7b983420a/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-        <img src="./assets/alumni/yali2_member5.jpg" alt="Alumni 1" />
-            <h3>Naveen V</h3>
-            <p>ABB</p>
-            <a href="https://www.linkedin.com/in/naveen-veluswamy-446457213/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-        <img src="./assets/alumni/yali2_member6.jpg" alt="Alumni 1" />
-            <h3>Swamninathan C</h3>
-            <p>KCT</p>
-            <a href="https://www.linkedin.com/in/swaminathan-chandramouli-a99463201/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <div class="alumni-card">
-        <img src="./assets/alumni/yali2_member9.jpg" alt="Alumni 1" />
-            <h3>Sneha Nagarajan</h3>
-            <p>Team Aura</p>
-            <a href="https://www.linkedin.com/in/sneha-nagarajan-93242b232/" target="_blank" class="linkedin-btn">LinkedIn</a>
-        </div>
-        <!-- Add more alumni here -->
-        </div>
+    <div class="about alumni-page" id="alumnipage"></div>
+    <div class="min-h-screen">
+        <header class="header">
+            <h1>ALUMNI NETWORK</h1>
+            <div class="header-line"></div>
+        </header>
+        
+        <main>
+            <section class="alumni-global">
+                <h2>ALUMNI ACROSS GLOBE</h2>
+                
+                <div class="alumni-grid">
+                    <!-- Global Alumni Cards -->
+                    <div class="alumni-card">
+                        <div class="card-content">
+                            <div class="image-container">
+                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Sarah Johnson">
+                            </div>
+                            <h3>Sarah Johnson</h3>
+                            <p>Google, San Francisco</p>
+                            <a href="https://linkedin.com/in/example" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other global alumni -->
+                </div>
+            </section>
+            
+            <div class="past-members-toggle">
+                <button id="togglePastMembers" class="toggle-btn">
+                    View Past Members
+                </button>
+            </div>
+            
+            <section id="pastMembers" class="past-members hidden">
+                <h2>PAST MEMBERS</h2>
+                
+                <div class="batch-selector">
+                    <button class="batch-btn active" data-batch="yali1">Yali 1.0</button>
+                    <button class="batch-btn" data-batch="yali2">Yali 2.0</button>
+                    <button class="batch-btn" data-batch="yali3">Yali 3.0</button>
+                </div>
+                
+                <div id="yali1" class="batch-container">
+                    <div class="alumni-grid">
+                        <!-- Yali 1.0 Alumni Cards -->
+                        <div class="alumni-card">
+                            <div class="card-content">
+                                <div class="image-container">
+                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Mohan R">
+                                </div>
+                                <h3>Mohan R</h3>
+                                <p>Bosch</p>
+                                <a href="https://www.linkedin.com/in/mohan-ravi/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Repeat for other Yali 1.0 alumni -->
+                    </div>
+                </div>
+                
+                <div id="yali2" class="batch-container">
+                    <div class="alumni-grid">
+                        <!-- Yali 2.0 Alumni Cards -->
+                        <div class="alumni-card">
+                            <div class="card-content">
+                                <div class="image-container">
+                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Mohan R">
+                                </div>
+                                <h3>Gerontius Leo L</h3>
+                                <p>Chalmers University</p>
+                                <a href="https://www.linkedin.com/in/mohan-ravi/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Repeat for other Yali 1.0 alumni -->
+                    </div>
+                </div>
+
+                <div id="yali3" class="batch-container">
+                    <div class="alumni-grid">
+                        <!-- Yali 3.0 Alumni Cards -->
+                        <div class="alumni-card">
+                            <div class="card-content">
+                                <div class="image-container">
+                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Mohan R">
+                                </div>
+                                <h3>Yuga Barathi</h3>
+                                <p>Mechatronics Engineering</p>
+                                <a href="https://www.linkedin.com/in/mohan-ravi/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Repeat for other Yali 1.0 alumni -->
+                    </div>
+                </div>
+                
+                <!-- Repeat for Yali 2.0 and 3.0 with different IDs -->
+            </section>
+        </main>
     </div>
-    <div class="batch-container" id="yali3" style="display: none;">
-    <div class="alumni-list">
-        <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member1.jpg" alt="Alumni 1" />
-        <h3>Yuga Barathi </h3>
-        <p>Mechatronics Engineering</p>
-        <a href="https://www.linkedin.com/in/yugabharathi-m/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member2.jpg" alt="Alumni 1" />
-        <h3>Kaushik V Subra</h3>
-        <p>Civil Engineering</p>
-        <a href="https://www.linkedin.com/in/kaushik-subraa-136992103/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member3.jpg" alt="Alumni 1" />
-        <h3>Jairish R</h3>
-        <p>Mechatronics Engineering</p>
-        <a href="https://www.linkedin.com/in/jairish-rajan/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member4.jpg" alt="Alumni 1" />
-        <h3>Rogith Raj S</h3>
-        <p>Electronics and communication Engineering</p>
-        <a href="https://linkedin.com/in/harshin-profile" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member5.jpg" alt="Alumni 1" />
-        <h3>Mukilan S</h3>
-        <p>Electronics and communication Engineering</p>
-        <a href="https://www.linkedin.com/in/mukilan1104/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member6.jpg" alt="Alumni 1" />
-        <h3>Shri Sanjanaa SE</h3>
-        <p>Atrtificial Intelligence and Data Science</p>
-        <a href="https://www.linkedin.com/in/shri-sanjanaa-s-e-65b13a226/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member7.jpg" alt="Alumni 1" />
-        <h3>Hemalatha V</h3>
-        <p>Electronics and Instrumentation engineering</p>
-        <a href="https://www.linkedin.com/in/hemalatha-venkataramanan-696676215/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member8.jpg" alt="Alumni 1" />
-        <h3>Roshan Manoj</h3>
-        <p>Information science and engineering</p>
-        <a href="https://www.linkedin.com/in/roshanmanoj/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-    <div class="alumni-card">
-        <img src="./assets/alumni/yali3_member9.jpg" alt="Alumni 1" />
-        <h3>Mahipooja M</h3>
-        <p>Bsc Psycology</p>
-        <a href="https://www.linkedin.com/in/mahipoojaa-m-52b431254/" target="_blank" class="linkedin-btn">LinkedIn</a>
-    </div>
-<!-- Add more alumni here -->
-    </div>
-</div>
+    <script src="script.js"></script>
 </div>
 >>>>>>> 6eec9ae (first commit)
 
@@ -2070,26 +2151,22 @@
                             Sponsors</strong></h1>
                     <ul>
                         <span data-group-title="Platinum Sponsor">
-                            <li><img src="./assets/logo/legrand.png"></li>
-                            <li><img src="./assets/logo/SBM.png"></li>
                         </span>
                         <span data-group-title="Gold Sponsor">
-                            <li><img src="./assets/logo/quench.png"></li>
-                            <li><img src="./assets/logo/ador.png"></li>
-                            <li><img src="./assets/logo/airliquid.png"></li>
-                            <li><img src="./assets/logo/rimdrive.png"></li>
+                            <li><img src="./assets/logo/SBM.png"></li>
+                            <li><img src="./assets/logo/thriveni.png"></li>
+                            <li><img src="./assets/logo/THRIVENI SAINIK.png"></li>
                         </span>
                         <span data-group-title="Silver Sponsors">
-                            <li><img src="./assets/logo/madhampatty.png"></li>
+                            <li><img src="./assets/logo/cosmos.png"></li>
+                            <li><img src="./assets/logo/quench.png"></li>
+                            <li><img src="./assets/logo/ador.png"></li>
+                            <li><img src="./assets/logo/legrand.png"></li>
                         </span>
                         <span data-group-title="Bronze Sponsors">
-                            <li><img src="./assets/logo/mukummarine.png"></li>
+                            <li><img src="./assets/logo/ROOTS.png"></li>
                             <li><img src="./assets/logo/janatics.png"></li>
-                            <li><img src="./assets/logo/cosmos.png"></li>
-                            <li><img src="./assets/logo/lloydmetals.png"></li>
-                            <li><img src="./assets/logo/thriveni.png"></li>
-                            <li><img src="./assets/logo/acc.png"></li>
-                            <li><img src="./assets/logo/mli.png"></li>
+                            <li><img src="./assets/logo/IND OIL.png"></li>
                         </span>
                     </ul>
                 </div>

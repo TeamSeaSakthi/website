@@ -71,6 +71,7 @@ $('#page-1-blog-section').on("mouseleave", function () {
 });
 
 
+
 window.addEventListener("load", () => {
     gsap.timeline({
         scrollTrigger: {
@@ -225,38 +226,216 @@ $(document).ready(function () {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const imageData = {
     "2023": ["1.jpg", "2.jpg", "3.jpg"],
     "2024": ["1.jpg", "2.jpg", "3.jpg"]
+=======
+// Set the event date - July 2, 2025
+const eventDate = new Date('July 2, 2025 00:00:00').getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById('days').textContent = String(days).padStart(2, '0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.querySelector('.countdown').innerHTML = '<h2>The Event Has Started!</h2>';
+    }
+}
+
+// Update the countdown every second
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// Initial call to avoid delay
+updateCountdown();
+
+// institution
+document.addEventListener('DOMContentLoaded', () => {
+// Function to check if element is in viewport    
+    const isInViewport = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    };
+    
+ // Function to animate elements when they come into view   
+    const animateOnScroll = () => {
+        const animatedElements = document.querySelectorAll('.fade-in, .fade-in-delay, .fade-in-delay-2, .fade-in-right, .slide-in');
+        
+        animatedElements.forEach(element => {
+            if (isInViewport(element) && !element.classList.contains('animated')) {
+                element.style.animation = 'none';
+                element.offsetHeight;
+                element.style.animation = null;
+                element.classList.add('animated');
+            }
+        });
+    };
+
+  // Add scroll event listener
+    window.addEventListener('scroll', animateOnScroll);
+    
+  // Initial check for elements in viewport    
+    animateOnScroll();
+
+  // Parallax effect for the image
+    const institutionImage = document.querySelector('.institution-image');
+    if (institutionImage) {
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            if (isInViewport(institutionImage)) {
+                institutionImage.style.transform = `translateY(${scrollPosition * 0.05}px)`;
+            }
+        });
+    }
+});
+
+// who are we
+document.addEventListener('DOMContentLoaded', () => {
+    const isInViewport = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    };
+    const animateOnScroll = () => {
+        const animatedElements = document.querySelectorAll('.fade-in, .fade-in-delay, .fade-in-delay-2, .slide-in');
+        
+        animatedElements.forEach(element => {
+            if (isInViewport(element) && !element.classList.contains('animated')) {
+                element.style.animation = 'none';
+                element.offsetHeight;
+            element.style.animation = null;
+            element.classList.add('animated');
+        }
+    });
+>>>>>>> 964364b (update)
 };
 
-const currentIndex = {
-    "2023": 0,
-    "2024": 0
-};
+window.addEventListener('scroll', animateOnScroll);
+animateOnScroll();
 
-function showGallery(year) {
-    document.getElementById("gallery-2023").style.display = "none";
-    document.getElementById("gallery-2024").style.display = "none";
-    document.getElementById(`gallery-${year}`).style.display = "block";
-    updateImage(year);
+const featureCards = document.querySelectorAll('.feature-card');
+featureCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+    card.style.transform = 'translateY(-4px)';
+    card.style.boxShadow = '0 8px 24px rgba(0, 127, 255, 0.15)';
+});
+
+card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0)';
+    card.style.boxShadow = 'none';
+});
+});
+});
+
+// Feature data
+const features = [
+    {
+        title: "Precision Propulsion",
+        description: "Think of it as having a supercharged engine that's both powerful and efficient. Our 15 kW motor gives you instant response when you need it, while using less energy - like having a sports car that's also great on fuel!",
+        icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`
+    },
+    {
+        title: "Eco-Smart Cockpit",
+        description: "We've built the cockpit using special materials from nature - balsa wood and flax fiber. It's like having a super-strong, lightweight shell that's also kind to the environment. Plus, it absorbs bumps and vibrations for a smoother ride!",
+        icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/></svg>`
+    },
+    {
+        title: "Advanced AR Navigation",
+        description: "Imagine having a heads-up display like in video games, but for real boating! Our AR glasses show you everything you need to know - speed, navigation, and warnings - right in front of your eyes, so you can focus on the water ahead.",
+        icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 8-4 8H6l-4-8 4-8Z"/><path d="M12 7v4"/><path d="M12 15h.01"/></svg>`
+    },
+    {
+        title: "Power Distribution Unit",
+        description: "Our advanced power system is like having a smart home for your boat's electricity. It manages power efficiently and safely, with 60% less wiring mess. Plus, it's waterproof and built tough for marine conditions!",
+        icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z"/></svg>`
+    },
+    {
+        title: "Advanced Safety System",
+        description: "Think of this as your boat's guardian angel. It constantly watches for any electrical problems and instantly responds to keep you safe. It's like having a highly trained safety expert on board at all times!",
+        icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>`
+    },
+    {
+        title: "Smart Performance Tracking",
+        description: "Just like a fitness tracker for your boat! It monitors everything from energy use to system health, helping you understand how your boat is performing and when it might need attention - no technical expertise required!",
+        icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>`
+    }
+];
+
+function initFeatures() {
+    const featuresGrid = document.getElementById('featuresGrid');
+    
+    features.forEach((feature, index) => {
+        const card = document.createElement('div');
+        card.className = 'feature-card';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        
+        card.innerHTML = `
+            <div class="feature-icon">
+                ${feature.icon}
+            </div>
+            <h3 class="feature-title">${feature.title}</h3>
+            <p class="feature-description">${feature.description}</p>
+        `;
+        
+        featuresGrid.appendChild(card);
+        
+        // Animate cards on scroll
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 100);
+    });
 }
 
-function updateImage(year) {
-    const imgElement = document.querySelector(`#gallery-${year} .gallery-image`);
-    imgElement.src = `./gallery/${year}/${imageData[year][currentIndex[year]]}`;
+// Smooth scroll
+document.querySelector('.scroll-button').addEventListener('click', () => {
+    document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Initialize features when DOM is loaded
+document.addEventListener('DOMContentLoaded', initFeatures);
+
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    },
+    { threshold: 0.1 }
+);
+
+document.querySelectorAll('.feature-card').forEach(card => {
+    observer.observe(card);
+});
+
+function showGallery(id) {
+    document.getElementById('gallery2024').classList.add('hidden');
+    document.getElementById('gallery2023').classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
 }
 
-function nextImage(year) {
-    currentIndex[year] = (currentIndex[year] + 1) % imageData[year].length;
-    updateImage(year);
-}
-
-function prevImage(year) {
- currentIndex[year] = (currentIndex[year] - 1 + imageData[year].length) % imageData[year].length;
-  updateImage(year);
-}
 
 
 >>>>>>> 6eec9ae (first commit)
@@ -274,10 +453,6 @@ function prevImage(year) {
 function open_source() {
     window.location.href = "https://kumaragurudtsteam-my.sharepoint.com/:f:/g/personal/jonattan_22ad_kct_ac_in/Ekzabbui-k1PrrkBmYQ8v8sBQ2Qsh3MNRayQvvGBpSZckw?e=ywUWiw"
 }
-
-
-
-
 
 
 
@@ -333,7 +508,219 @@ MicroModal.init({
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+// Team Members Data
+const teamMembers = [
+    {
+        id: 1,
+        name: "Naveen Murugesan",
+        designation: "Team Manager",
+        image: "./assets/members/naveen.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/naveen-murugesh-t-0b0670309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+        id: 2,
+        name: "Kamalika Venugopal",
+        designation: "Lead operation",
+        image: "./assets/members/kamalikka.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/kamalikka-venugopal-b7549125a/"
+    },
+    {
+        id: 3,
+        name: "Athish clements",
+        designation: "Lead energy system",
+        image: "./assets/members/athish.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/athish-clements-t-589891276/d"
+    },
+    {
+        id: 4,
+        name: "Jonattan S",
+        designation: "Lead embedded system",
+        image: "./assets/members/jonattan.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/jonattans/"
+    },
+    {
+        id: 5,
+        name: "Krithesh S",
+        designation: "Lead software and integration",
+        image: "./assets/members/krithesh.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/krithesh-sudhakar/"
+    },
+    {
+        id: 6,
+        name: "Dev Aanandh M",
+        designation: "Lead Material science",
+        image: "./assets/members/dev.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/dev-aanandh-474644241/"
+    },
+    {
+        id: 7,
+        name: "Dhanu Malayan",
+        designation: "Lead Electricals and Integration",
+        image: "./assets/members/dhanu.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/dhanu-malayan-ab91bb277/"
+    },
+    {
+        id: 8,
+        name: "Raghav A",
+        designation: "Analyst Manufacturing and Integration",
+        image: "./assets/members/raghav.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/raghav-anandkumar-2b113a303/"
+    },
+    {
+        id: 9,
+        name: "Sharan B",
+        designation: "Analyst Energy system",
+        image: "./assets/members/sharan.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/sharan-balasubramaniam-977b49293/"
+    },
+    {
+        id: 10,
+        name: "Manoj N",
+        designation: "Analyst Embedded system",
+        image: "./assets/members/anoj.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/manoj-n-866708283/"
+    },
+    {
+        id: 11,
+        name: "Divya Dharshini S",
+        designation: "Analyst Electrical System",
+        image: "./assets/members/divya.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/divya-dharshini-s-0790b8290/"
+    },
+    {
+        id: 12,
+        name: "Harshavarthan V",
+        designation: "Analyst Software and Integration",
+        image: "./assets/members/harsha.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/harshavarthan-venkatesan-76737b290/"
+    },
+    {
+        id: 13,
+        name: "Monisha V",
+        designation: "Executive social media and outreach ",
+        image: "./assets/members/monisha.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/monisha-veluswamy-03bb4a16b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+        id: 14,
+        name: "Midun Karthik",
+        designation: "Executive Sponsorship",
+        image: "./assets/members/midun.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/midun-karthik/"
+    },
+    {
+        id: 15,
+        name: "Nithya Sri C R",
+        designation: "Executive marketting and media",
+        image: "./assets/members/nithya.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/nithya-sri-c-r-ab201b333/"
+    },
+    {
+        id: 16,
+        name: "Hariharan S M",
+        designation: "Executive logistics and supply chain",
+        image: "./assets/members/das.jpg",
+        linkedinUrl: "https://www.linkedin.com/in/naveen-murugesh-t-0b0670309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    }
+];
+
+// LinkedIn Icon SVG
+const linkedinIconSVG = `
+    <svg class="linkedin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect x="2" y="9" width="4" height="12"/>
+        <circle cx="4" cy="4" r="2"/>
+    </svg>
+`;
+
+// Function to create team member HTML
+function createTeamMemberHTML(member) {
+    return `
+        <div class="team-member">
+            <!-- Profile Image -->
+            <div class="profile-section">
+                <div class="profile-image-wrapper">
+                    <img src="${member.image}" alt="${member.name}" class="profile-image">
+                </div>
+            </div>
+
+            <!-- Member Info -->
+            <div class="member-info">
+                <h3 class="member-name">${member.name}</h3>
+                <p class="member-designation">${member.designation}</p>
+            </div>
+
+            <!-- LinkedIn Button -->
+            <a href="${member.linkedinUrl}" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                ${linkedinIconSVG}
+                LinkedIn
+            </a>
+        </div>
+    `;
+}
+
+// Function to render all team members
+function renderTeamMembers() {
+    const teamGrid = document.getElementById('teamGrid');
+    
+    if (teamGrid) {
+        const teamHTML = teamMembers.map(member => createTeamMemberHTML(member)).join('');
+        teamGrid.innerHTML = teamHTML;
+    }
+}
+
+// Initialize the team page when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    renderTeamMembers();
+    
+    // Add smooth scroll behavior for better UX
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Optional: Add loading animation
+    const teamContainer = document.querySelector('.team-container');
+    if (teamContainer) {
+        teamContainer.style.opacity = '0';
+        teamContainer.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            teamContainer.style.transition = 'all 0.6s ease';
+            teamContainer.style.opacity = '1';
+            teamContainer.style.transform = 'translateY(0)';
+        }, 100);
+    }
+});
+
+// Optional: Add intersection observer for scroll animations
+function addScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe team member cards
+    document.querySelectorAll('.team-member').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+    });
+}
+
+// Call scroll animations after a short delay
+setTimeout(addScrollAnimations, 500);
+
+>>>>>>> 964364b (update)
 /*
 >>>>>>> 6eec9ae (first commit)
 // Click a button automatically on start after 0.5 seconds
@@ -596,22 +983,334 @@ document.addEventListener('DOMContentLoaded', () => {
     typeText();
 });
 
-// On batch button click, show corresponding alumni list
-document.querySelectorAll('.batch-btn').forEach(button => {
-    button.addEventListener('click', () => {
-    // Remove active from all buttons
-    document.querySelectorAll('.batch-btn').forEach(btn => btn.classList.remove('active'));
+// Data for global alumni
+const globalAlumni = [
+    {
+        id: 1,
+        name: 'Sanaa M',
+        position: 'UCL-London',
+        imageUrl: './assets/alumni/yali1_member8.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/sanaa-m-a52b7119b/'
+    },
+    {
+        id: 2,
+        name: 'Gerontius Leo L',
+        position: 'Chalmers University',
+        imageUrl: './assets/alumni/yali2_member1.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/gerontius-leo-l-61b938171/'
+    },
+    {
+        id: 3,
+        name: 'Anjana Prasad',
+        position: 'Collins Aerospace',
+        imageUrl: './assets/alumni/yali2_member2.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/anjana-prasad3101/'
+    },
+    {
+        id: 4,
+        name: 'Anandh B',
+        position: 'KTH Royal Institute-Stockholm',
+        imageUrl: './assets/alumni/yali2_member3.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/anandh-balasubramani/'
+    },
+    {
+        id: 5,
+        name: 'Naveen V',
+        position: 'ABB',
+        imageUrl: './assets/alumni/yali2_member5.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/naveen-veluswamy-446457213/'
+    },
+    {
+        id: 6,
+        name: 'Yuga Barathi',
+        position: 'Team Blue Rising',
+        imageUrl: './assets/alumni/yali3_member1.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/yugabharathi-m/'
+    },
+    {
+        id: 7,
+        name: 'Jairish R',
+        position: 'Team Blue Rising',
+        imageUrl: './assets/alumni/yali3_member3.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/jairish-rajan/'
+    },
+    {
+        id: 8,
+        name: 'Rogith Raj S',
+        position: 'Team Blue Rising',
+        imageUrl: './assets/alumni/yali3_member4.jpg',
+        linkedinUrl: 'https://linkedin.com/in/example'
+    }
+];
 
-    // Hide all batch containers
-    document.querySelectorAll('.batch-container').forEach(container => container.style.display = 'none');
+// Data for past members
+const pastMembers = {
+    yali1: [
+        {
+        id: 1,
+        name: 'Mohan R',
+        position: 'Bosch',
+        imageUrl: './assets/alumni/yali1_member1.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/mohan-ravi/'
+        },
+        {
+        id: 2,
+        name: 'Kishore Krisna S',
+        position: 'Cameron',
+        imageUrl: './assets/alumni/yali1_member2.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/kishore-krisna-s-b9818a1b8/'
+        },
+        {
+        id: 3,
+        name: 'Manav R Samant',
+        position: 'Shell',
+        imageUrl: './assets/alumni/yali1_member3.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/manavsamant/'
+        },
+        {
+        id: 4,
+        name: 'Vekash S',
+        position: 'Aivar Innovations',
+        imageUrl: './assets/alumni/yali1_member4.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/vekash-s-148068162/'
+        },
+        {
+        id: 5,
+        name: 'Barathraj M',
+        position: 'Quindl Technologies',
+        imageUrl: './assets/alumni/yali1_member5.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/bharathraj-m/'
+        },
+        {
+        id: 6,
+        name: 'Sanaa M',
+        position: 'UCL-London',
+        imageUrl: './assets/alumni/yali1_member8.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/sanaa-m-a52b7119b/'
+        }
+    ],
+    yali2: [
+        {
+        id: 1,
+        name: 'Gerontius Leo L',
+        position: 'Chalmers University',
+        imageUrl: './assets/alumni/yali2_member1.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/gerontius-leo-l-61b938171/'
+        },
+        {
+        id: 2,
+        name: 'Anjana Prasad',
+        position: 'Collins Aerospace',
+        imageUrl: './assets/alumni/yali2_member2.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/anjana-prasad3101/'
+        },
+        {
+        id: 3,
+        name: 'Anandh B',
+        position: 'KTH Royal Institute-Stockholm',
+        imageUrl: './assets/alumni/yali2_member3.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/anandh-balasubramani/'
+        },
+        {
+        id: 4,
+        name: 'Vikash S',
+        position: 'Hochschule Stralsund-Germany',
+        imageUrl: './assets/alumni/yali2_member4.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/vikash-sakthivel-7b983420a/'
+        },
+        {
+        id: 5,
+        name: 'Naveen V',
+        position: 'ABB',
+        imageUrl: './assets/alumni/yali2_member5.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/naveen-veluswamy-446457213/'
+        },
+        {
+        id: 6,
+        name: 'Swamninathan C',
+        position: 'KCT',
+        imageUrl: './assets/alumni/yali2_member4.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/swaminathan-chandramouli-a99463201/'
+        },
+        {
+        id: 7,
+        name: 'SSneha Nagarajan',
+        position: 'Team Aura',
+        imageUrl: './assets/alumni/yali2_member9.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/sneha-nagarajan-93242b232/'
+        }
+    ],
+    yali3: [
+        {
+        id: 1,
+        name: 'Yuga Barathi',
+        position: 'Mechatronics Engineering',
+        imageUrl: './assets/alumni/yali3_member1.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/yugabharathi-m/'
+        },
+        {
+        id: 2,
+        name: 'Kaushik V Subra',
+        position: 'Civil Engineering',
+        imageUrl: './assets/alumni/yali3_member2.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/kaushik-subraa-136992103/'
+        },
+        {
+        id: 3,
+        name: 'Jairish R',
+        position: 'Mechatronics Engineering',
+        imageUrl: './assets/alumni/yali3_member3.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/jairish-rajan/'
+        },
+        {
+        id: 4,
+        name: 'Rogith Raj S',
+        position: 'Electronics and Communication Engineering',
+        imageUrl: './assets/alumni/yali3_member4.jpg',
+        linkedinUrl: 'https://linkedin.com/in/rogith-raj'
+        },
+        {
+        id: 5,
+        name: 'Mukilan S',
+        position: 'Electronics and Communication Engineering',
+        imageUrl: './assets/alumni/yali3_member5.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/mukilan1104/'
+        },
+        {
+        id: 6,
+        name: 'Shri Sanjanaa SE',
+        position: 'Artificial Intelligence and Data Science',
+        imageUrl: './assets/alumni/yali3_member6.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/shri-sanjanaa-s-e-65b13a226/'
+        },
+        {
+        id: 7,
+        name: 'Hemalatha V',
+        position: 'Electronics and Instrumentation engineering',
+        imageUrl: './assets/alumni/yali3_member7.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/hemalatha-venkataramanan-696676215/'
+        },
+        {
+        id: 8,
+        name: 'Roshan Manoj',
+        position: 'Information science and engineering',
+        imageUrl: './assets/alumni/yali3_member8.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/roshanmanoj/'
+        },
+        {
+        id: 9,
+        name: 'Mahipooja M',
+        position: 'Bsc Psycology',
+        imageUrl: './assets/alumni/yali3_member9.jpg',
+        linkedinUrl: 'https://www.linkedin.com/in/mahipoojaa-m-52b431254/'
+        }
+    ]
+};
 
-    // Show selected batch container
-    const batch = button.getAttribute('data-batch');
-    document.getElementById(batch).style.display = 'block';
+// Function to create an alumni card
+function createAlumniCard(alumni) {
+    return `
+    <div class="alumni-card">
+    <div class="card-content">
+    <div class="image-container">
+    <img src="${alumni.imageUrl}" alt="${alumni.name}">
+    </div>
+    <h3>${alumni.name}</h3>
+    <p>${alumni.position}</p>
+    <a href="${alumni.linkedinUrl}" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    LinkedIn
+    </a>
+    </div>
+    </div>
+    `;
+}
 
-    // Set this button active
-    button.classList.add('active');
-});
+// Function to render global alumni
+function renderGlobalAlumni() {
+    const container = document.querySelector('.alumni-grid');
+    if (container) {
+        container.innerHTML = globalAlumni.map(alumni => createAlumniCard(alumni)).join('');
+    }
+}
+
+// Function to render past members
+function renderPastMembers(batch) {
+    const container = document.getElementById(batch);
+    if (container) {
+        const batchMembers = pastMembers[batch];
+        container.innerHTML = `
+        <div class="alumni-grid">
+        ${batchMembers.map(alumni => createAlumniCard(alumni)).join('')}
+        </div>
+        `;
+    }
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+    // Render global alumni
+    renderGlobalAlumni();
+    
+    // Toggle past members section
+    const toggleBtn = document.getElementById('togglePastMembers');
+    const pastMembersSection = document.getElementById('pastMembers');
+    
+    if (toggleBtn && pastMembersSection) {
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = pastMembersSection.classList.contains('hidden');
+            pastMembersSection.classList.toggle('hidden');
+            toggleBtn.textContent = isHidden ? 'Hide Past Members' : 'View Past Members';
+            
+            if (isHidden) {
+                pastMembersSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+    
+    // Batch selection functionality
+    const batchButtons = document.querySelectorAll('.batch-btn');
+    const batchContainers = document.querySelectorAll('.batch-container');
+    
+    batchButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            batchButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            // Hide all batch containers
+            batchContainers.forEach(container => {
+                if (container) {
+                    container.style.display = 'none';
+                }
+            });
+            
+            // Show selected batch container and render its content
+            const selectedBatch = button.getAttribute('data-batch');
+            const selectedContainer = document.getElementById(selectedBatch);
+            if (selectedContainer) {
+                selectedContainer.style.display = 'block';
+                renderPastMembers(selectedBatch);
+            }
+        });
+    });
+    
+    // Initialize first batch
+    renderPastMembers('yali1');
+    
+    // Add hover effect to alumni cards
+    const alumniCards = document.querySelectorAll('.alumni-card');
+    alumniCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-8px)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
 });
 
 
