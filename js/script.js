@@ -225,13 +225,6 @@ $(document).ready(function () {
     });
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const imageData = {
-    "2023": ["1.jpg", "2.jpg", "3.jpg"],
-    "2024": ["1.jpg", "2.jpg", "3.jpg"]
-=======
 // Set the event date - July 2, 2025
 const eventDate = new Date('July 2, 2025 00:00:00').getTime();
 
@@ -324,7 +317,6 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('animated');
         }
     });
->>>>>>> 964364b (update)
 };
 
 window.addEventListener('scroll', animateOnScroll);
@@ -438,7 +430,6 @@ function showGallery(id) {
 
 
 
->>>>>>> 6eec9ae (first commit)
 
 
 
@@ -507,10 +498,6 @@ MicroModal.init({
     awaitCloseAnimation: true, debugMode: true
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 // Team Members Data
 const teamMembers = [
@@ -720,9 +707,7 @@ function addScrollAnimations() {
 // Call scroll animations after a short delay
 setTimeout(addScrollAnimations, 500);
 
->>>>>>> 964364b (update)
 /*
->>>>>>> 6eec9ae (first commit)
 // Click a button automatically on start after 0.5 seconds
 setTimeout(function () {
     document.getElementById("crowdfunding-btn").click();
@@ -732,11 +717,7 @@ setTimeout(function () {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
 }*/
-<<<<<<< HEAD
-
-=======
 /*
->>>>>>> 6eec9ae (first commit)
 document.getElementById("do-crowdfund").addEventListener('pointerdown', function () {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
@@ -751,11 +732,7 @@ document.getElementById("read-more-btn").onclick = function () {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
 }*/
-<<<<<<< HEAD
-
-=======
 /*
->>>>>>> 6eec9ae (first commit)
 function open_milaap() {
     // Open new tab
     window.open("https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm", "_blank");
@@ -850,11 +827,7 @@ function CountDownTimer(dt, id) {
 
 }
 
-<<<<<<< HEAD
-CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');
-=======
 CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');*/
->>>>>>> 6eec9ae (first commit)
 
 /*
 (function () {
@@ -873,11 +846,7 @@ CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');*/
     keyframes = `@keyframes scroll-marquee {
     0% {transform:translate3d(${totalWidth}px,0px,0px);}
     100% {transform:translate3d(0px,0px,0px);}
-<<<<<<< HEAD
-  }`;
-=======
 };
->>>>>>> 6eec9ae (first commit)
 
     style = document.createElement('style');
 
@@ -909,9 +878,6 @@ CountDownTimer('07/01/2024 01:00 AM', 'days-countdown');*/
 
 }).call(this); */
 
-<<<<<<< HEAD
-baguetteBox.run('.tz-gallery');
-=======
 baguetteBox.run('.tz-gallery');
 document.addEventListener('DOMContentLoaded', () => {
     const teamText = document.getElementById('teamText');
@@ -1317,4 +1283,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
->>>>>>> 6eec9ae (first commit)
