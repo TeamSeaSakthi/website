@@ -512,7 +512,7 @@ const teamMembers = [
         id: 2,
         name: "Kamalika Venugopal",
         designation: "Lead operation",
-        image: "./assets/members/kamalikka.jpg",
+        image: "./assets/members/kamalikka.JPG",
         linkedinUrl: "https://www.linkedin.com/in/kamalikka-venugopal-b7549125a/"
     },
     {
@@ -540,77 +540,77 @@ const teamMembers = [
         id: 6,
         name: "Dev Aanandh M",
         designation: "Lead Material science",
-        image: "./assets/members/dev.jpg",
+        image: "./assets/members/dev.JPG",
         linkedinUrl: "https://www.linkedin.com/in/dev-aanandh-474644241/"
     },
     {
         id: 7,
         name: "Dhanu Malayan",
         designation: "Lead Electricals and Integration",
-        image: "./assets/members/dhanu.jpg",
+        image: "./assets/members/dhanu.JPG",
         linkedinUrl: "https://www.linkedin.com/in/dhanu-malayan-ab91bb277/"
     },
     {
         id: 8,
         name: "Raghav A",
         designation: "Analyst Manufacturing and Integration",
-        image: "./assets/members/raghav.jpg",
+        image: "./assets/members/raghav.JPG",
         linkedinUrl: "https://www.linkedin.com/in/raghav-anandkumar-2b113a303/"
     },
     {
         id: 9,
         name: "Sharan B",
         designation: "Analyst Energy system",
-        image: "./assets/members/sharan.jpg",
+        image: "./assets/members/sharan.JPG",
         linkedinUrl: "https://www.linkedin.com/in/sharan-balasubramaniam-977b49293/"
     },
     {
         id: 10,
         name: "Manoj N",
         designation: "Analyst Embedded system",
-        image: "./assets/members/anoj.jpg",
+        image: "./assets/members/anoj.JPG",
         linkedinUrl: "https://www.linkedin.com/in/manoj-n-866708283/"
     },
     {
         id: 11,
         name: "Divya Dharshini S",
         designation: "Analyst Electrical System",
-        image: "./assets/members/divya.jpg",
+        image: "./assets/members/divya.JPG",
         linkedinUrl: "https://www.linkedin.com/in/divya-dharshini-s-0790b8290/"
     },
     {
         id: 12,
         name: "Harshavarthan V",
         designation: "Analyst Software and Integration",
-        image: "./assets/members/harsha.jpg",
+        image: "./assets/members/harsha.JPG",
         linkedinUrl: "https://www.linkedin.com/in/harshavarthan-venkatesan-76737b290/"
     },
     {
         id: 13,
         name: "Monisha V",
         designation: "Executive social media and outreach ",
-        image: "./assets/members/monisha.jpg",
+        image: "./assets/members/monisha.JPG",
         linkedinUrl: "https://www.linkedin.com/in/monisha-veluswamy-03bb4a16b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
         id: 14,
         name: "Midun Karthik",
         designation: "Executive Sponsorship",
-        image: "./assets/members/midun.jpg",
+        image: "./assets/members/midun.JPG",
         linkedinUrl: "https://www.linkedin.com/in/midun-karthik/"
     },
     {
         id: 15,
         name: "Nithya Sri C R",
         designation: "Executive marketting and media",
-        image: "./assets/members/nithya.jpg",
+        image: "./assets/members/nithya.JPG",
         linkedinUrl: "https://www.linkedin.com/in/nithya-sri-c-r-ab201b333/"
     },
     {
         id: 16,
         name: "Hariharan S M",
         designation: "Executive logistics and supply chain",
-        image: "./assets/members/das.jpg",
+        image: "./assets/members/das.JPG",
         linkedinUrl: "https://www.linkedin.com/in/naveen-murugesh-t-0b0670309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
 ];
