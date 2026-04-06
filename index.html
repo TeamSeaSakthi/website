@@ -1,1545 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Sea Sakthi | Yali 4.0</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Sea Sakthi - Intro Sequence</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>YALI 4.0 - Advanced Marine Innovation</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="google" content="notranslate">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sea Sakthi — Future of Yachting</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/theme.css">
 </head>
-
 <body>
-    <div class="intro-container">
-        <div class="intro-content">
-            <h1 id="teamText" class="team-text"></h1>
-            <div id="yaliContainer" class="yali-container hidden">
-                <span class="yali-text">YALI</span>
-                <span id="yaliNumber" class="yali-number">1.0</span>
-            </div>
-            <div id="tamilYali" class="tamil-yali-container hidden">
-                <h2 class="tamil-yali-text">யாழி <span class="large-number">4.0</span></h2>
-            </div>
-        </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="header-logo"><img src="./assets/logo.png" alt="Sea Sakthi"></a>
+    <nav class="header-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="boats.html">Boats</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta"><a href="https://milaap.org/fundraisers/support-team-sea-sakthi-3" target="_blank" class="btn btn-primary btn-sm">Support Us</a></div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </header>
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="boats.html">Boats</a>
+    <a href="gallery.html">Gallery</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ==================== HERO — IMMERSIVE 3D ==================== -->
+  <section class="hero-3d-full" id="hero">
+    <!-- Full-screen Three.js canvas -->
+    <canvas id="boat-canvas"></canvas>
+
+    <!-- Gradient overlay for text readability -->
+    <div class="hero-3d-full__overlay"></div>
+
+    <!-- Floating text content -->
+    <div class="hero-3d-full__content">
+      <p class="hero-3d-full__tag anim-in" data-d="0.3">
+        <span class="pulse-dot"></span>
+        Monaco Energy Boat Challenge 2026
+      </p>
+      <h1 class="hero-3d-full__title">
+        <span class="anim-in" data-d="0.5">Future</span><br>
+        <span class="hero-3d-full__accent anim-in" data-d="0.7">of Yachting<span class="stroke-dot">.</span></span>
+      </h1>
+      <p class="hero-3d-full__desc anim-in" data-d="1.0">India's first and only student team at the world's premier sustainable boating challenge. Pioneering clean energy propulsion with Yali 5.0.</p>
+      <div class="hero-3d-full__btns anim-in" data-d="1.2">
+        <a href="boats.html" class="btn btn-primary">Explore Yali 5.0</a>
+        <a href="about.html" class="btn btn-outline-light">Our Story</a>
+      </div>
     </div>
 
-    <!-- Your original page content here -->
-    <div id="mainContent" class="main-content hidden">
-        <!-- Your existing content goes here -->
+    <!-- Bottom countdown bar -->
+    <div class="hero-3d-full__bar anim-in" data-d="1.5">
+      <div class="bar-label">The Race to Monaco Begins In</div>
+      <div class="stat"><strong id="h-days">00</strong><span>Days</span></div>
+      <div class="stat-line"></div>
+      <div class="stat"><strong id="h-hours">00</strong><span>Hours</span></div>
+      <div class="stat-line"></div>
+      <div class="stat"><strong id="h-mins">00</strong><span>Minutes</span></div>
+      <div class="stat-line"></div>
+      <div class="stat"><strong id="h-secs">00</strong><span>Seconds</span></div>
     </div>
 
-
-    <div class="fsmenu">
-        <div class="fixed-top main-menu">
-            <div class="flex-center p-5">
-                <ul class="nav flex-column">
-                    <li class="nav-item delay-1"><a class="nav-link" onclick="navto('landingpage')">HOME</a></li>
-                    <li class="nav-item delay-2"><a class="nav-link" onclick="navto('institutionpage')">INSTITUTION</a>
-                    </li>
-                    <li class="nav-item delay-3"><a class="nav-link" onclick="navto('aboutpage')">ABOUT US</a></li>
-                    <li class="nav-item delay-4"><a class="nav-link" onclick="navto('featurepage')">OUR FEATURES</a>
-                    </li>
-                    <li class="nav-item delay-5"><a class="nav-link" onclick="navto('editionpage')">EDITONS</a></li>
-                    <li class="nav-item delay-5"><a class="nav-link" onclick="navto('projectspage')">OUR PROJECTS</a></li>
-                    <li class="nav-item delay-6"><a class="nav-link" onclick="navto('teampage')">OUR TEAM</a></li>
-                    <li class="nav-item delay-7"><a class="nav-link" onclick="navto('gallerypage')">GALLERY</a></li>
-                    <li class="nav-item delay-8"><a class="nav-link" onclick="navto('articlespage')">ARTICLES</a></li>
-                    <li class="nav-item delay-11"><a class="nav-link" onclick="navto('alumnipage')">ALUMNI</a></li>
-                    <li class="nav-item delay-10"><a class="nav-link" onclick="navto('sponsorspage')">SPONSORS</a></li>
-                    <li class="nav-item delay-11"><a class="nav-link" onclick="navto('contactpage')">CONTACT US</a></li>
-                    
-                </ul>
-            </div>
-        </div>
+    <!-- Scroll indicator -->
+    <div class="hero-3d-full__scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
     </div>
+  </section>
 
-    <!--
-    <div class="marquee" id="crowdfund-maq" onclick="open_milaap();">
-        <div class="marquee__item">
-            Support Team Seasakthi! Your donations help us build a better future.
-            <span class="marquee__seperator">Click here!</a></span>
-            Support Team Seasakthi! Your donations help us build a better future.
-            <span class="marquee__seperator">Click here!</a></span>
-            Support Team Seasakthi! Your donations help us build a better future.
-            <span class="marquee__seperator">Click here!</a></span>
-            Support Team Seasakthi! Your donations help us build a better future.
-            <span class="marquee__seperator">Click here!</a></span>
-            Support Team Seasakthi! Your donations help us build a better future.
-            <span class="marquee__seperator">Click here!</a></span>
-            Support Team Seasakthi! Your donations help us build a better future.
-            <span class="marquee__seperator">Click here!</a></span>
-            Support Team Seasakthi! Your donations help us build a better future.
-            <span class="marquee__seperator">Click here!</a></span>
-        </div>
-    </div> -->
-
-    
-    <header class="index-header">
-        <div class="progress-container fixed-top">
-            <span class="progress-bar"></span>
-        </div>
-        <div style="float: left;">
-            <img class="index-header-logo" src="./assets/logo.png" alt="Logo">
-        </div>
-        <div class="hamburger">
-            <div class="hamburger--container">
-                <div class="hamburger--bars">
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-    <div class="modal micromodal-slide" id="crowdfunding" aria-hidden="true">
-        <div class="modal__overlay modal__overlay-crowd" tabindex="-1" data-micromodal-close>
-            <div class="modal__container-crowd" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <div class="crowdfunding-container">
-                    <div class="content">
-                        <div class="left">
-                            <img src="./assets/pictures/underwater.webp">
-                            <h1 class="cfdtitle">Support<Br>Team Sea Sakthi</h1>
-                        </div>
-                        <div class="right">
-                            <header class="modal__header header-crowd">
-                                <button class="modal__close close-crowd" aria-label="Close modal"
-                                    data-micromodal-close></button>
-                            </header>
-                            <h3 class="rghtitle">About Team Sea Sakthi</h3>
-                            <p class="dsctitle">Team Sea Sakthi made history as the inaugural and sole Indian team at
-                                the Monaco Energy Boat Challenge in 2022. Comprising a dedicated team of 13 students,
-                                they crafted India's pioneering energy boat, 'Yali', marking a significant milestone.
-                                Building on their success, they unveiled 'Yali 2.0' in the subsequent edition,
-                                showcasing their commitment to innovation. Their exceptional journey continues as they
-                                proudly showcase India's ingenuity for the third consecutive time on the international
-                                platform, reaffirming their status as pioneers in sustainable marine technology.</p>
-                            <p class="dsctitlemob">Support Indian Students' team to compete in Monaco Energy Boat
-                                Challenge 2024</p>
-                            <h6 class="read-more-btn" id="read-more-btn"><span>Read More&nbsp;&nbsp;<i
-                                        class="fas fa-caret-down"></i></span></h6>
-                            <hr class="paragraph-line">
-                            <div class="fund-raise-progress">
-                                <div id=countdown-wrap>
-                                    <div id="goal">₹46,00,000</div>
-                                    <div id="glass">
-                                        <div id="progress">
-                                        </div>
-                                    </div>
-                                    <div class="goal-stat">
-                                        <span class="goal-number">68%</span>
-                                        <span class="goal-label">Funded</span>
-                                    </div>
-                                    <div class="goal-stat">
-                                        <span class="goal-number">₹73,00,000</span>
-                                        <span class="goal-label">Required</span>
-                                    </div>
-                                    <div class="goal-stat">
-                                        <span class="goal-number">
-                                            <div id="days-countdown"></div>
-                                        </span>
-                                        <span class="goal-label">Days Left</span>
-                                    </div>
-                                    <div class="goal-stat">
-                                        <span class="goal-number">07</span>
-                                        <span class="goal-label">Sponsors</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="do-crowdfund"><button disabled>
-                                    <span id="do-crowdfund">
-                                        <span class="container">
-                                            <span class="primary"></span>
-                                            <span class="complimentary"></span>
-                                        </span>
-                                    </span>
-                                    <span>Support Us</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-
-    <!-- MODAL -->
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="modal-1-title">
-                        About
-                    </h2>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        Welcome to the Garage at Kumaraguru College, a dynamic hub where automotive enthusiasts from
-                        various domains come together to innovate and excel. This vibrant space hosts over 400
-                        undergraduate students collaborating across 13 specialized teams, including Formula, Go-Kart,
-                        and sustainable initiatives like E-Bike. Supported by 20 industry partners, these teams work
-                        tirelessly on pioneering projects, aiming to shape the future of automotive engineering. Our
-                        community boasts over 100 titles and a network of 1400+ alumni, reflecting our commitment to
-                        excellence and innovation. The Garage is not just a workspace; it's a launchpad for aspiring
-                        engineers to transform their ideas into reality.
-                    </p>
-                </main>
-                <!--<footer class="modal__footer">
-                    <button class="modal__btn" data-micromodal-close
-                        aria-label="Close this dialog window">Close</button>
-                </footer>-->
-            </div>
-        </div>
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="ticker">
+    <div class="ticker__track">
+      <span>Innovation</span><span class="ticker__sep"></span>
+      <span>Sustainability</span><span class="ticker__sep"></span>
+      <span>Propulsion</span><span class="ticker__sep"></span>
+      <span>Engineering</span><span class="ticker__sep"></span>
+      <span>Clean Energy</span><span class="ticker__sep"></span>
+      <span>Innovation</span><span class="ticker__sep"></span>
+      <span>Sustainability</span><span class="ticker__sep"></span>
+      <span>Propulsion</span><span class="ticker__sep"></span>
+      <span>Engineering</span><span class="ticker__sep"></span>
+      <span>Clean Energy</span><span class="ticker__sep"></span>
     </div>
+  </div>
 
-    <!-- MODAL -->
-    <div class="modal micromodal-slide" id="modal-yali-1" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="modal-1-title">
-                        Yali 1.0
-                    </h2>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        Team Sea Sakthi proudly represents India as the first and only team to participate in the
-                        prestigious Monaco Energy Boat Challenge. Comprising a dedicated 13-member crew, this innovative
-                        team has engineered a remarkable vessel: Yali 1.0, the nation’s first energy boat.
-                        <br><br>
-                        Yali 1.0 is a testament to cutting-edge technology and sustainable design, featuring:
-                        <br><br>
-                        Aluminium Fabricated Cockpit
-                        400W Solar Panel as Secondary Power Source
-                        9.6 kWh Lithium-Ion Battery as Primary Power Source
-                        Powered by a 6kW Propulsion System
-                        Their exceptional performance earned them an impressive 6th place overall globally, and they
-                        were also honored with the Communication Prize for their outstanding efforts in sharing their
-                        vision and innovations with the world.
-                    </p>
-                </main>
-                <!--<footer class="modal__footer">
-                    <button class="modal__btn" data-micromodal-close
-                        aria-label="Close this dialog window">Close</button>
-                </footer>-->
-            </div>
+  <!-- ==================== ABOUT ==================== -->
+  <section class="sec">
+    <div class="container">
+      <div class="sec__head anim-up">
+        <h6>About Team Sea Sakthi</h6>
+        <h2>India's first &amp; only energy boat team at the Monaco Energy Boat Challenge</h2>
+      </div>
+      <div class="cols">
+        <div class="cols__left">
+          <div class="svc anim-up">
+            <span class="svc__num">01</span>
+            <h3>Precision Propulsion</h3>
+            <p>15 kW axial flux motor delivering instant response with maximum efficiency — powerful performance that's kind on energy.</p>
+            <a href="boats.html" class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></a>
+          </div>
+          <div class="svc anim-up">
+            <span class="svc__num">02</span>
+            <h3>Eco-Smart Cockpit</h3>
+            <p>Balsa-Flax composite cockpit — super-strong, lightweight, and kind to the environment. Natural materials, extraordinary performance.</p>
+            <a href="boats.html" class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></a>
+          </div>
+          <div class="svc anim-up">
+            <span class="svc__num">03</span>
+            <h3>AR Navigation</h3>
+            <p>Cutting-edge AR glasses providing pilots 360-degree awareness with real-time speed, navigation, and warning data overlay.</p>
+            <a href="boats.html" class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></a>
+          </div>
         </div>
+        <div class="cols__right anim-up">
+          <img src="./assets/2024/photo9.jpg" alt="Team at work" class="cols__img">
+          <img src="./assets/2024/photo3.jpg" alt="Boat testing" class="cols__img">
+          <img src="./assets/pictures/monaco_Drive.jpg" alt="Monaco" class="cols__img">
+        </div>
+      </div>
     </div>
+  </section>
 
-
-    <!-- MODAL -->
-    <div class="modal micromodal-slide" id="modal-yali-2" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="modal-1-title">
-                        Yali 2.0
-                    </h2>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        Team Sea Sakthi continues to lead the way once again in sustainable maritime innovation as the
-                        first and only team from India to participate in the prestigious Monaco Energy Boat Challenge.
-                        With a dedicated 10-member crew in their second year, they have now introduced YALI 2.0, the
-                        nation’s first hydrogen-powered boat.
-                        <br>
-                        YALI 2.0 exemplifies cutting-edge technology and sustainable design, featuring:
-                        <br><br>
-                        Hydrogen Fuel Cell Powered Energy Boat
-                        Carbon Fibre Monocoque Structure
-                        Custom-Designed Electric Propulsion System
-                        <br><br>
-                        Their exceptional performance earned them the 6th overall position globally and the
-                        Communication Prize for two consecutive years. Additionally, they received a special recognition
-                        award, the Monaco Townhall Cup, in their second year.
-                    </p>
-                </main>
-                <!--<footer class="modal__footer">
-                    <button class="modal__btn" data-micromodal-close
-                        aria-label="Close this dialog window">Close</button>
-                </footer>-->
-            </div>
-        </div>
+  <!-- ==================== BG TEXT MARQUEE ==================== -->
+  <div class="bgtext">
+    <div class="bgtext__track">
+      <span>yali 5.0</span><span class="bgtext__dot">*</span>
+      <span>kumaraguru</span><span class="bgtext__dot">*</span>
+      <span>monaco 2026</span><span class="bgtext__dot">*</span>
+      <span>sustainable</span><span class="bgtext__dot">*</span>
+      <span>yali 5.0</span><span class="bgtext__dot">*</span>
+      <span>kumaraguru</span><span class="bgtext__dot">*</span>
+      <span>monaco 2026</span><span class="bgtext__dot">*</span>
+      <span>sustainable</span><span class="bgtext__dot">*</span>
     </div>
+  </div>
 
-    <!-- MODAL -->
-    <div class="modal micromodal-slide" id="modal-yali-3" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="modal-1-title">
-                        Yali 3.0
-                    </h2>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        Team Sea Sakthi: Pioneers in Sustainable Maritime Innovation
-
-                        For the third consecutive year, we at Team Sea Sakthi are proud to represent India as the only
-                        team qualified to participate in the prestigious Monaco Energy Boat Challenge (MEBC). With
-                        greater determination than ever, our 13-member crew has developed YALI 3.0, showcasing the
-                        pinnacle of sustainable boating technology.
-                        <br>
-                        YALI 3.0 features:
-                        <br><br>
-                        Twin Propulsion System: Engineered for high performance, capable of reaching speeds up to 20
-                        knots.
-                        Indigenous LFP Battery Pack: Designed for high performance under heavy current loads.
-                        Monocoque Structure: Composed of pineapple fiber, offering sustainable strength, high
-                        performance, and eco-chic appeal.
-
-                        Building on our previous successes—ranking 6th overall globally, winning the Communication Prize
-                        for two consecutive years, and receiving the Monaco Townhall Cup, we are setting new benchmarks
-                        in clean energy boating.
-
-                        As we prepare for MEBC 2024, we aim for the podium, bringing our innovative spirit and
-                        commitment to sustainability to the global stage once again.
-                    </p>
-                </main>
-                <!--<footer class="modal__footer">
-                    <button class="modal__btn" data-micromodal-close
-                        aria-label="Close this dialog window">Close</button>
-                </footer>-->
-            </div>
-        </div>
+  <!-- ==================== PORTFOLIO / EDITIONS ==================== -->
+  <section class="sec">
+    <div class="container">
+      <div class="sec__head anim-up">
+        <h6>Explore Our Fleet</h6>
+        <h2>Latest editions and innovations</h2>
+      </div>
+      <div class="accordion anim-up">
+        <a href="boats.html" class="accordion__item">
+          <img src="./assets/2024/photo7.jpg" alt="Yali 5.0">
+          <div class="accordion__info">
+            <h4>Yali 5.0</h4>
+            <p>Next Gen &middot; MEBC 2026 &middot; Coming Soon</p>
+          </div>
+        </a>
+        <a href="boats.html" class="accordion__item">
+          <img src="./assets/yali4.jpg" alt="Yali 4.0">
+          <div class="accordion__info">
+            <h4>Yali 4.0</h4>
+            <p>Axial Flux &middot; AR Nav &middot; 18+ knots &middot; 2025</p>
+          </div>
+        </a>
+        <a href="boats.html" class="accordion__item">
+          <img src="./assets/2024/photo12.JPG" alt="Yali 3.0">
+          <div class="accordion__info">
+            <h4>Yali 3.0</h4>
+            <p>Twin Prop &middot; 260 kg &middot; 16 knots &middot; 2024</p>
+          </div>
+        </a>
+        <a href="boats.html" class="accordion__item">
+          <img src="./assets/2024/photo13.JPG" alt="Yali 2.0">
+          <div class="accordion__info">
+            <h4>Yali 2.0</h4>
+            <p>Hydrogen Fuel Cell &middot; 260 kg &middot; 14 knots &middot; 2023</p>
+          </div>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <!-- MODAL -->
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="modal-1-title">
-                        Innovation
-                    </h2>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        The boat, a timeless vessel of adventure and discovery, embodies the human spirit's quest for
-                        exploration across vast oceans and tranquil rivers alike. From the sleek lines of a modern yacht
-                        to the rustic charm of a weathered fishing boat, each craft tells a story of maritime heritage
-                        and innovation. Whether powered by the relentless force of wind, the steady rhythm of oars, or
-                        the hum of modern engines, boats connect us to the primal allure of the sea. They are symbols of
-                        freedom, carrying dreams and aspirations on their sturdy hulls. With every journey, boats forge
-                        bonds between people and places, weaving a tapestry of maritime lore that spans the globe. In
-                        their graceful dance upon the water, boats whisper tales of courage, resilience, and the
-                        unyielding human spirit that seeks horizons beyond the known.
-                    </p>
-                </main>
-                <!--<footer class="modal__footer">
-                        <button class="modal__btn" data-micromodal-close
-                            aria-label="Close this dialog window">Close</button>
-                    </footer>-->
-            </div>
+  <!-- ==================== PATRONS ==================== -->
+  <section class="sec sec--cream">
+    <div class="container">
+      <div class="sec__head text-center anim-up">
+        <h2 style="text-align: left;">Our Patrons</h2>
+      </div>
+      <div class="patrons-grid anim-up">
+        <div class="patron-card">
+          <img src="./assets/patrons/patron3.jpg" alt="H.E. Didier Gamerdinger" class="patron-img">
+          <h6>H.E. Didier Gamerdinger</h6>
+          <p>Ambassador of Monaco to India</p>
         </div>
+        <div class="patron-card">
+          <img src="./assets/patrons/patron1.jpg" alt="Shri. Shankar Vanavarayar" class="patron-img">
+          <h6>Shri. Shankar Vanavarayar</h6>
+          <p>President, Kumaraguru Institutions</p>
+        </div>
+        <div class="patron-card">
+          <img src="./assets/patrons/patron4.jpg" alt="Mr. Sumeet Anand" class="patron-img">
+          <h6>Mr. Sumeet Anand</h6>
+          <p>Founder of Indsight Growth</p>
+        </div>
+        <div class="patron-card">
+          <img src="./assets/patrons/patron6.jpg" alt="Mr. Siddharth Singh" class="patron-img">
+          <h6>Mr. Siddharth Singh</h6>
+          <p>International Energy Agency</p>
+        </div>
+        <div class="patron-card">
+          <img src="./assets/patrons/patron5.webp" alt="CDR Abhilash Tomy" class="patron-img">
+          <h6>CDR Abhilash Tomy</h6>
+          <p>Indian Navy Officer, Golden Globe Race</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="pages" id="landingpage">
-        <div class="page-1-background">
-            <video class="full-screen page-1-video" src="./assets/landing.mov"autoplay muted loop playsinline>
-            </video>
-        </div>
-
-        <div class="page-1-down-text">
-            <p class="top"><span class="bullet"></span><span>INTRODUCING</span></p>
-            <span class="heading">
-                <div>Future</div><svg viewBox="0 0 62 52" xmlns="http://www.w3.org/2000/svg" class="arrow">
-                    <path
-                        d="M29.5022 47.6948L34.0415 51.8852L61.9258 26.1437L34.0415 0.402134L29.5022 4.59261L49.6048 23.1505L0.969421 23.1505L0.96942 29.1369L49.6048 29.1369L29.5022 47.6948Z"
-                        fill="currentColor"></path>
-                </svg><br>
-                <div>Of Yachting</div>
-            </span>
-        </div>
-
-        <div id="page-1-right-blog" class="page-1-right-blog blog-button-inactive">
-            <p id="page-1-right-blog-scroll-text" class="inactive">BLOG.</p>
-        </div>
-
-        <div id="page-1-blog-section" class="page-1-blog-section blog-inactive">
-            <p class="page-1-blog-section-heading">Our Blog</p>
-            <section class="blog-cards">
-                <article class="blog-card blog-card--1">
-                    <div class="blog-card__info-hover">
-                        <div class="blog-card__clock-info">
-                            <svg class="blog-card__clock" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                            </svg><span class="blog-card__time">15 min</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-card__img"></div>
-                    <a href="https://teamseasakthi.blogspot.com/2024/05/TssPondyTesting.html" class="blog-card_link">
-                        <div class="blog-card__img--hover"></div>
-                    </a>
-                    <div class="blog-card__info">
-                        <span class="blog-card__category"> India</span>
-                        <h3 class="blog-card__title">From Tranquil waters to the demanding Bay Of Bengal</h3>
-                        <span class="blog-card__by">by <a href="#" class="blog-card__author" title="author">Mahi
-                                Poojaa</a></span>
-                    </div>
-                </article>
-
-                <article class="blog-card blog-card--2">
-                    <div class="blog-card__info-hover">
-
-                        <div class="blog-card__clock-info">
-                            <svg class="blog-card__clock" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                            </svg><span class="blog-card__time">5 min</span>
-                        </div>
-
-                    </div>
-                    <div class="blog-card__img"></div>
-                    <a href="https://teamseasakthi.blogspot.com/2024/04/tssphase1testing.html" class="blog-card_link">
-                        <div class="blog-card__img--hover"></div>
-                    </a>
-                    <div class="blog-card__info">
-                        <span class="blog-card__category"> Coimbatore</span>
-                        <h3 class="blog-card__title">Yali 3.0 in the water for the first time</h3>
-                        <span class="blog-card__by">by <a href="#" class="blog-card__author" title="author">Mahi
-                                Poojaa</a></span>
-                    </div>
-                </article>
-            </section>
-        </div>
+  <!-- ==================== TEAM ==================== -->
+  <section class="sec">
+    <div class="container">
+      <div class="sec__head anim-up">
+        <h6>Meet Our Team</h6>
+        <h2>Our team</h2>
+        <p class="sec__sub">We're 16 individuals from Kumaraguru College of Technology driven by bold ideas in sustainable maritime innovation</p>
+      </div>
+      <div class="team-row">
+        <div class="tcard anim-up"><div class="tcard__img"><img src="./assets/members/Raghav.jpg" alt=""></div><h6>Raghav</h6><p>Team Captain & Technical Lead</p></div>
+        <div class="tcard anim-up"><div class="tcard__img"><img src="./assets/members/Sharan.jpg" alt=""></div><h6>Sharan</h6><p>Pilot & Energy System Specialist</p></div>
+        <div class="tcard anim-up"><div class="tcard__img"><img src="./assets/members/Harith.jpg" alt=""></div><h6>Harith</h6><p>Mechanical Structure Engineer</p></div>
+        <div class="tcard anim-up"><div class="tcard__img"><img src="./assets/members/Aishwarya.jpg" alt=""></div><h6>Aishwarya</h6><p>Lead Operations & Management</p></div>
+      </div>
+      <div class="text-center" style="margin-top:60px">
+        <a href="team.html" class="btn btn-outline">View Full Team</a>
+      </div>
     </div>
+  </section>
 
-    <!--
-    <div class="pages">
-        <h2 class="page-title">YALI 3.0</h2>
-
-        <span class="number"><img src="./assets/cruise.png"></span>
-        <span class="side-text">SEA SAKTHI <span class="side-text__dim">2024</span></span>
-
-        <div class="horizontal-scroll-section__content-wrapper wrapper oneabout">
-            <div class="horizontal-scroll-section__content-section">
-                <img class="one-about-photo" src="./assets/institution.jpg" />
-                <div class="content">
-                    <div class="content__slide active">
-                        <h2 class="title"> <span class="title__line"> <span
-                                    class="title__inner">Kumaraguru</span></span><span class="title__line">
-                                <span class="title__inner">Institutions</span></span></h2>
-                        <p class="desc">For forty years, Kumaraguru Institutions have promoted scientific thinking,
-                            analysis, and inquiry in education, research, and innovation. Committed to technology
-                            for ecological resilience, we champion sustainability, poised to make a significant
-                            positive impact on the environment.</p>
-                        <div class="button-wrap"><a class="button" style="text-decoration:none" href="https://kct.ac.in"
-                                target="_blank">Learn More<span class="button__hover"></span></a>
-                        </div>
-                    </div>
-                    <div class="content__ping content__ping--right content__ping--noanimation"></div>
-
-                </div>
-            </div>
-            <div class="horizontal-scroll-section__content-section">
-                <img class="one-about-photo" src="./assets/garage.jpg" />
-                <div class="content">
-                    <div class="content__slide active">
-                        <h2 class="title"> <span class="title__line"> <span
-                                    class="title__inner">Innovation</span></span><br><span class="title__line">
-                                <span class="title__inner">Center</span></span></h2>
-                        <p class="desc">Established in 2014, KCAID is a global research hub focused on student
-                            motorsports, product development, and sustainable mobility. With 13 teams, 100+ titles,
-                            20 industry partners, 400+ students, and 1400+ alumni.</p>
-                        <div class="button-wrap"><a class="button" data-micromodal-trigger="modal-1">Learn More<span
-                                    class="button__hover"></span></a>
-                        </div>
-                    </div>
-                    <div class="content__ping content__ping--right content__ping--noanimation"></div>
-
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="pages institution" style="height: fit-content;" id="institutionpage">
-        <div class="institution-section">
-            <div class="institution-container">
-                <div class="institution-content">
-                    <div class="text-content">
-                        <h1 class="institution-title fade-in">Kumaraguru Institutions</h1>
-                        <div class="title-underline slide-in"></div>
-                        <p class="institution-description fade-in-delay">
-                            For forty years, Kumaraguru Institutions have promoted scientific thinking,
-                            analysis, and inquiry in education, research, and innovation. Committed to technology
-                            for ecological resilience, we champion sustainability, poised to make a significant
-                            positive impact on the environment.
-                        </p>
-                        <a href="https://kct.ac.in" target="_blank" class="learn-more-btn fade-in-delay-2">
-                            <span>Learn More</span>
-                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="institution-image-container fade-in-right">
-                    <div class="image-frame">
-                        <img src="./assets/institution.jpg" alt="Kumaraguru Institutions Campus" class="institution-image">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <!-- MEBC Introduction Section -->
-    <div class="pages mebc bg-dark text-white" style="height: fit-content;" id="mebcpage">
-        <div class="mebc-page">
-            <div class="container">
-                <div class="content-wrapper">
-                    <div class="image-section">
-                        <img src="./assets/2024/photo9.jpg" alt="Monaco Energy Boat Challenge">
-                    </div>
-                    <div class="text-section">
-                        <h1>Monaco Energy Boat<br>Challenge (MEBC)</h1>
-                        <p>
-                            The Monaco Energy Boat Challenge is a globally recognized competition that brings together the brightest student
-                            innovators in sustainable marine mobility. Organized by the Yacht Club de Monaco, the event challenges teams to design
-                            and race clean energy-powered boats. Team Sea Sakthi proudly represents India for the third consecutive year, showcasing
-                            cutting-edge innovation, green engineering, and a strong commitment to sustainable maritime technology.
-                        </p>
-                        <div class="countdown-section">
-                            <h2>The Race to Monaco Begins In</h2>
-                            <div class="countdown">
-                                <div class="time-box">
-                                    <span id="days">00</span>
-                                    <span class="label">DAYS</span>
-                                </div>
-                                <span class="colon">:</span>
-                                <div class="time-box">
-                                    <span id="hours">00</span>
-                                    <span class="label">HOURS</span>
-                                </div>
-                                <span class="colon">:</span>
-                                <div class="time-box">
-                                    <span id="minutes">00</span>
-                                    <span class="label">MINUTES</span>
-                                </div>
-                                <span class="colon">:</span>
-                                <div class="time-box">
-                                    <span id="seconds">00</span>
-                                    <span class="label">SECONDS</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cta">
-                            <a href="https://energyboatchallenge.com/" target="_blank" class="learn-more">
-                                Learn More ⚓
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    <div class="pages who-are-we" style="height: max-content;" id="aboutpage">
-        <!-- About 1 - Bootstrap Brain Component -->
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-image-container fade-in">
-                    <div class="image-frame">
-                        <img src="./assets/2024/photo5.jpg" alt="Team Sea Sakthi" class="about-image">
-                    </div>
-                </div>
-                <div class="about-content">
-                    <h2 class="about-title fade-in">Who Are We?</h2>
-                    <div class="title-underline slide-in"></div>
-                    <p class="about-description fade-in-delay">
-                        Team Sea Sakthi is excited to participate in the prestigious Monaco Energy Boat Challenge 2024 as the official team representing our institution. Our team comprises of 10 passionate students who are dedicated to developing a unique hybrid boat concept.
-                    </p>
-                    <div class="features-grid fade-in-delay-2">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Mission</h3>
-                                <p>To induce a revolution of electric mobility in the maritime sector by incorporating concepts of cleaner technologies.</p>
-                            </div>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Vision</h3>
-                                <p>To establish a maritime sector that is environmentally sustainable.
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- ==================== CTA ==================== -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="anim-up">Shaping the future with sustainable marine innovation</h2>
+      <a href="https://milaap.org/fundraisers/support-team-sea-sakthi-3" target="_blank" class="btn btn-primary anim-up">Get Started</a>
     </div>
+  </section>
 
-    
-
-    <div class="pages features" style="height: max-content;" id="featurepage">
-        <section class="hero">
-        <div class="yali-creatures">
-            <div class="yali left"></div>
-            <div class="yali right"></div>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="./assets/logo.png" alt="Sea Sakthi" class="footer__logo">
+          <p>Team Sea Sakthi is a student-driven initiative from Kumaraguru College of Technology, Coimbatore, representing India at the Monaco Energy Boat Challenge since 2022.</p>
         </div>
-        
-        <div class="content">
-            <h1 class="title">YALI 4.0</h1>
-            <div class="divider"></div>
-            <p class="description">
-                Elevating marine innovation with a bespoke 15 kW axial flux motor, delivering precise, high-efficiency propulsion. Its advanced Balsa-Flax composite cockpit merges lightweight strength with sustainable resilience. Cutting-edge AR Glasses provide pilots with comprehensive 360° awareness and real-time insights, while an IP67-rated PDU featuring HVIL and IRM technology streamlines power management, reduces wiring complexity by 60%, and enhances safety—defining a new pinnacle of intelligent, eco-conscious marine performance.
-            </p>
-            <button class="scroll-button" aria-label="Scroll to features">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m6 9 6 6 6-6"/>
-                </svg>
-            </button>
+        <div class="footer__col">
+          <h6>Contact</h6>
+          <ul>
+            <li><a href="mailto:teamseasakthi@gmail.com">teamseasakthi@gmail.com</a></li>
+            <li><a href="tel:+917530009152">+91 75300 09152</a></li>
+          </ul>
+          <p class="footer__addr">KCT Garage, Kumaraguru College of Technology, Coimbatore, India</p>
         </div>
-    </section>
-
-    <section id="features" class="features">
-        <div class="features-header">
-            <h2>YALI 4.0 FEATURES</h2>
-            <div class="divider"></div>
+        <div class="footer__col">
+          <h6>Links</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="boats.html">Boats</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-        
-        <div class="features-grid" id="featuresGrid"></div>
-    </section>
-
-
-    <!--
-    <div class="pages introduce" style="height: 200vh; overflow: unset;">
-        <header>
-            <video autoplay muted loop src="./assets/present.mp4" preload="none"
-                poster="./assets/present_poster.jpg"></video>
-            <section>
-                <h1>
-                    <span class="presents-heading">Presenting</span>
-                    <span>Energy powered eco-friendly twin propulsion boat.</span>
-                </h1>
-            </section>
-        </header>
-    </div> 
-
-    <div class="pages magnification" id="underwater-magnification">
-        <div class="mag-wrapper">
-            <div class="mag-content">
-                <section class="mag-section hero">
-                    <section class="section banner banner-section">
-                        <div class="container banner-column">
-                            <div class="banner-inner">
-                                <h1 class="heading-xl">Eco-Friendly<br>Fibers</h1>
-                                <p class="paragraph">
-                                    We used sandwhiched layer of pineapple fiber to<br>promote eco-friendly and
-                                    sustainablity in our boat.
-                                    <br>It is light weight and strong. It is also biodegradable. <br>It is a perfect
-                                    alternative to glass fiber.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-            </div>
-            <div class="mag-image-container">
-                <img class="mag-img" src="./assets/blue-mag.png" alt="image">
-            </div>
+        <div class="footer__col">
+          <h6>Resources</h6>
+          <ul>
+            <li><a href="https://teamseasakthi.blogspot.com" target="_blank">Blog</a></li>
+            <li><a href="./assets/brochure.pdf" download>Brochure</a></li>
+            <li><a href="https://energyboatchallenge.com" target="_blank">MEBC</a></li>
+            <li><a href="https://kct.ac.in" target="_blank">KCT</a></li>
+          </ul>
         </div>
-    </div> -->
-</div>
-    <div class="pages about editions" id="editionpage" style="height: max-content;">
-        <h2 class="page-title">Previous Editions</h2>
-        <div class="versions">
-            <div class="wrapper">
-
-                <div class="content">
-                    <div class="bg-shape">
-                        <img src="./assets/yali_bg.png" alt="">
-                    </div>
-
-
-                    <div class="product-img">
-                        <div class="product-img__item" id="img3">
-                            <img src="./assets/yali3.png" alt="star wars" class="product-img__img">
-                        </div>
-                        <div class="product-img__item" id="img1">
-                            <img src="./assets/yali2.png" alt="star wars" class="product-img__img">
-                        </div>
-                        <div class="product-img__item" id="img2">
-                            <img src="./assets/yaliv1.png" alt="star wars" class="product-img__img">
-                        </div>
-                    </div>
-
-
-
-                    <div class="product-slider">
-                        <button class="prev disabled">
-                            <span class="icon">
-                                <svg class="icon icon-arrow-right">
-                                    <use xlink:href="#icon-arrow-left"></use>
-                                </svg>
-                            </span>
-                        </button>
-                        <button class="next">
-                            <span class="icon">
-                                <svg class="icon icon-arrow-right">
-                                    <use xlink:href="#icon-arrow-right"></use>
-                                </svg>
-                            </span>
-                        </button>
-
-                        <div class="product-slider__wrp swiper-wrapper">
-                            <div class="product-slider__item swiper-slide" data-target="img3">
-                                <div class="product-slider__card">
-                                    <img src="./assets/pictures/photo7.jpg" alt="star wars"
-                                        class="product-slider__cover">
-                                    <div class="product-slider__content">
-                                        <h1 class="product-slider__title">
-                                            PRJ. YALI - 3.0 <br> 2024, IN
-                                        </h1>
-                                        <span class="product-slider__price">ECO-FRIEDNLY</span>
-                                        <div class="product-ctr">
-                                            <div class="product-labels">
-                                                <div class="product-labels__title">ENGINE</div>
-
-                                                <div class="product-labels__group">
-                                                    <span class="product-labels__txt">DUO PROP</span>
-                                                </div>
-
-                                                <div class="product-labels__title">WEIGHT</div>
-
-                                                <div class="product-labels__group">
-                                                    <span class="product-labels__txt">260 KGS</span>
-                                                </div>
-
-                                            </div>
-
-                                            <span class="hr-vertical"></span>
-
-                                            <div class="product-inf">
-                                                <div class="product-inf__percent">
-                                                    <div class="product-inf__percent-circle">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
-                                                            viewBox="0 0 100 100">
-                                                            <defs>
-                                                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%"
-                                                                    y2="100%">
-                                                                    <stop offset="0%" stop-color="#0c1e2c"
-                                                                        stop-opacity="0" />
-                                                                    <stop offset="100%" stop-color="#cb2240"
-                                                                        stop-opacity="1" />
-                                                                </linearGradient>
-                                                            </defs>
-                                                            <circle cx="50" cy="50" r="47" stroke-dasharray="220, 300"
-                                                                stroke="#cb2240" stroke-width="4" fill="none" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="product-inf__percent-txt">
-                                                        16
-                                                    </div>
-                                                </div>
-
-                                                <span class="product-inf__title">MAX SPEED</span>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="product-slider__bottom">
-                                            <button class="product-slider__cart" data-micromodal-trigger="modal-yali-3">
-                                                INFO
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        
-                            <div class="product-slider__item swiper-slide" data-target="img1">
-                                <div class="product-slider__card">
-                                    <img src="./assets/pictures/monaco_Drive.jpg" alt="star wars"
-                                        class="product-slider__cover">
-                                    <div class="product-slider__content">
-                                        <h1 class="product-slider__title">
-                                            PRJ. YALI - 2.0 <br> 2023, IN
-                                        </h1>
-                                        <span class="product-slider__price">HYDROGEN FUEL</span>
-                                        <div class="product-ctr">
-                                            <div class="product-labels">
-                                                <div class="product-labels__title">ENGINE</div>
-
-                                                <div class="product-labels__group">
-                                                    <span class="product-labels__txt">SINGLE PROP</span>
-                                                </div>
-
-                                                <div class="product-labels__title">WEIGHT</div>
-
-                                                <div class="product-labels__group">
-                                                    <span class="product-labels__txt">260 KGS</span>
-                                                </div>
-
-                                            </div>
-
-                                            <span class="hr-vertical"></span>
-
-                                            <div class="product-inf">
-                                                <div class="product-inf__percent">
-                                                    <div class="product-inf__percent-circle">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
-                                                            viewBox="0 0 100 100">
-                                                            <defs>
-                                                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%"
-                                                                    y2="100%">
-                                                                    <stop offset="0%" stop-color="#0c1e2c"
-                                                                        stop-opacity="0" />
-                                                                    <stop offset="100%" stop-color="#cb2240"
-                                                                        stop-opacity="1" />
-                                                                </linearGradient>
-                                                            </defs>
-                                                            <circle cx="50" cy="50" r="47" stroke-dasharray="220, 300"
-                                                                stroke="#cb2240" stroke-width="4" fill="none" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="product-inf__percent-txt">
-                                                        14
-                                                    </div>
-                                                </div>
-
-                                                <span class="product-inf__title">MAX SPEED</span>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="product-slider__bottom">
-                                            <button class="product-slider__cart" data-micromodal-trigger="modal-yali-2">
-                                                INFO
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-slider__item swiper-slide" data-target="img2">
-                                <div class="product-slider__card">
-                                    <img src="./assets/pictures/patron4.webp" alt="star wars"
-                                        class="product-slider__cover">
-                                    <div class="product-slider__content">
-                                        <h1 class="product-slider__title">
-                                            PRJ. YALI - V1 <br> INITIAL
-                                        </h1>
-                                        <span class="product-slider__price">ECO-FRIEDNLY</span>
-                                        <div class="product-ctr">
-                                            <div class="product-labels">
-                                                <div class="product-labels__title">ENGINE</div>
-
-                                                <div class="product-labels__group">
-                                                    <span class="product-labels__txt">SINGLE PROP</span>
-                                                </div>
-
-                                                <div class="product-labels__title">WEIGHT</div>
-
-                                                <div class="product-labels__group">
-                                                    <span class="product-labels__txt">290 KGS</span>
-                                                </div>
-
-                                            </div>
-
-                                            <span class="hr-vertical"></span>
-
-                                            <div class="product-inf">
-                                                <div class="product-inf__percent">
-                                                    <div class="product-inf__percent-circle">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
-                                                            viewBox="0 0 100 100">
-                                                            <defs>
-                                                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%"
-                                                                    y2="100%">
-                                                                    <stop offset="0%" stop-color="#0c1e2c"
-                                                                        stop-opacity="0" />
-                                                                    <stop offset="100%" stop-color="#cb2240"
-                                                                        stop-opacity="1" />
-                                                                </linearGradient>
-                                                            </defs>
-                                                            <circle cx="50" cy="50" r="47" stroke-dasharray="190, 300"
-                                                                stroke="#cb2240" stroke-width="4" fill="none" />
-                                                        </svg>
-                                                    </div>
-                                                    <div class="product-inf__percent-txt">
-                                                        11
-                                                    </div>
-                                                </div>
-
-                                                <span class="product-inf__title">MAX SPEED</span>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="product-slider__bottom">
-                                            <button class="product-slider__cart" data-micromodal-trigger="modal-yali-1">
-                                                INFO
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="footer__line"></div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Team Sea Sakthi</span>
+        <div class="footer__social">
+          <a href="https://in.linkedin.com/in/team-sea-sakthi-kct-564bbb22a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/teamseasakthi" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/teamseasakthi" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-        <svg class="hidden" hidden>
-            <symbol id="icon-arrow-left" viewBox="0 0 32 32">
-                <path
-                    d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
-                </path>
-            </symbol>
-            <symbol id="icon-arrow-right" viewBox="0 0 32 32">
-                <path
-                    d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
-                </path>
-            </symbol>
-        </svg>
-  
-
-
-    <!--
-    <div class="pages about testimonial">
-        <h2 class="page-title">Our Patrons</h2>
-   
-
-        <div class="slider">
-         
-            <div class="list">
-                <div class="item active">
-                    <img src="./assets/pictures/patron1.jpg">
-                    <div class="content">
-                        <p>Shri Shankar Vanavarayar</p>
-                        <h2>&ldquo;President - Kumaraguru Institutions&rdquo;</h2>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/pictures/patron2.jpg">
-                    <div class="content">
-                        <p>H.E. Jawad Ashraf</p>
-                        <h2>&ldquo;Ambassador of India to Monaco and France&rdquo;</h2>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/pictures/patron3.jpg">
-                    <div class="content">
-                        <p>H.E. Didier Gamerdinger</p>
-                        <h2>&ldquo;Ambassador of Monaco to India&rdquo;</h2>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/pictures/patron4.webp">
-                    <div class="content">
-                        <p>Mr. Sumeet Anand</p>
-                        <h2>&ldquo;Founder of Indsight Growth&rdquo;</h2>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/pictures/patron5.jpg">
-                    <div class="content">
-                        <p>CDR Abilash Tomy</p>
-                        <h2>&ldquo;Indian Navy Officer, Runner-up Racer at Golden Globe Race (GCR) 2022&rdquo;</h2>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/pictures/patron6.jpg">
-                    <div class="content">
-                        <p>Mr. Siddharth Singh</p>
-                        <h2>&ldquo;Office of the Chief Energy Economist, International Energy Agency&rdquo;</h2>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="arrows">
-                <button id="prev">
-                    &lt;</button>
-                <button id="next">&gt;</button>
-            </div>
-            
-            <div class="thumbnail">
-                <div class="item active">
-                    <img src="./assets/patrons/patron1.jpg">
-                    <div class="content">
-                        Shri Shankar Vanavarayar
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/patrons/patron2.jpg">
-                    <div class="content">
-                        H.E. Jawad Ashraf
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/patrons/patron3.jpg">
-                    <div class="content">
-                        H.E. Didier Gamerdinger
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/patrons/patron4.jpg">
-                    <div class="content">
-                        Mr. Sumeet Anand
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/patrons/patron5.webp">
-                    <div class="content">
-                        CDR Abilash Tomy
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./assets/patrons/patron6.jpg">
-                    <div class="content">
-                        Mr. Siddharth Singh
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-    <div class="about team-page" id="teampage">
-        <h2 class="page-title"></h2>
-        <div class="team-container">
-        <div class="team-wrapper">
-            <!-- Header Section -->
-            <div class="header-section">
-                <div class="header-title">
-                    <svg class="team-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-                    <h1>OUR TEAM</h1>
-                </div>
-                <div class="header-divider"></div>
-            </div>
-
-            <!-- Team Grid -->
-            <div class="team-grid" id="teamGrid">
-                <!-- Team members will be populated by JavaScript -->
-            </div>
-
-        </div>
+      </div>
     </div>
+  </footer>
 
-    <script src="team.js"></script>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-
-    <div class="pages" id="gallerypage">
-        <h2 class="page-title">Gallery</h2>
-
-    <div class="switch-buttons">
-        <button onclick="showGallery('gallery2024')">2024 Gallery</button>
-        <button onclick="showGallery('gallery2023')">2023 Gallery</button>
-    </div>
-
-    <!-- 2024 Gallery -->
-    <div id="gallery2024" class="gallery-container">
-        <div class="gallery-grid">
-            <div class="gallery-item landscape"><img src="./assets/2024/photo1.JPG" alt="2024 Photo 1"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo2.JPG" alt="2024 Photo 2"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo5.jpg" alt="2024 Photo 3"></div>
-            <div class="gallery-item portrait"><img src="./assets/2024/photo9.jpg" alt="2024 Portrait"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo8.jpg" alt="2024 Photo 4"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo11.JPG" alt="2024 Photo 5"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo12.JPG" alt="2024 Photo 6"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo13.JPG" alt="2024 Photo 7"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo3.jpg" alt="2024 Photo 8"></div>
-            <div class="gallery-item landscape"><img src="./assets/2024/photo1.JPG" alt="2024 Photo 9"></div>
-
-        </div>
-    </div>
-
-    <!-- 2023 Gallery -->
-    <div id="gallery2023" class="gallery-container hidden">
-        <div class="grid-three-cols">
-            <img src="./assets/2023/1.jpg" alt="2023 Photo 1">
-            <img src="./assets/2023/2.jpg" alt="2023 Photo 2">
-            <img src="./assets/2023/3.jpg" alt="2023 Photo 3">
-            <img src="./assets/2023/4.jpg" alt="2023 Photo 4">
-            <img src="./assets/2023/8.jpg" alt="2023 Photo 5">
-            <img src="./assets/2023/6.jpg" alt="2023 Photo 6">
-            <img src="./assets/2023/7.jpg" alt="2023 Photo 7">
-            <img src="./assets/2023/9.jpg" alt="2023 Photo 8">
-            <img src="./assets/2023/5.jpg" alt="2023 Photo 9">
-        </div>
-    </div>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-        <script>
-            baguetteBox.run('.tz-gallery');
-        </script>
-    </div>
-
-
-    <div class="pages">
-        <h2 class=" page-title">Open Source</h2>
-        <div class="container-fluid">
-            <div class="row d-flex">
-                <div class="col align-middle">
-                    <div class="px-2 py-5 mt-5">
-                        <img src="./assets/open-source.webp" class="img-fluid" alt="...">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="px-5 py-5 mt-5 mobile-fix-opensource">
-                        <div class="px-2 py-5 mt-5 align-middle mobile-fix-opensource">
-                            <h4 class="op-primary">Open-Source Kit 1.0</h4>
-                            <p class="op-primary mobile-fix-hide">Welcome to our open source community, where innovation knows no
-                                bounds. Join us in shaping the future of technology through collaboration and shared
-                                knowledge. Explore our projects, contribute your skills, and together, let's make a
-                                difference in the world of open source.</p>
-                        </div>
-                        <div class="px-2">
-                            <button type="button" class="btn btn-outline-primary" onclick="open_source();">Download Files</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="pages about articles-section" id="articlespage">
-        <div class="blog">
-            <div class="blog-part is-menu">
-
-            </div>
-            <div class="blog-header blog-is-sticky">
-                <div class="blog-article header-article">
-                    <div class="blog-big__title">Eco</div>
-                    <div class="blog-menu rounded small-title">Pinned Issue</div>
-                </div>
-                <div class="blog-article page-number">
-                    NO. 01
-                </div>
-            </div>
-            <div class="blog-header-container">
-                <div class="blog-header">
-                    <div class="blog-article header-article">
-                        <div class="blog-big__title"><span class="onlymobile">Eco&nbsp; </span>Boat</div>
-                        <div class="blog-menu small-title date">12.06.2025</div>
-                    </div>
-                    <div class="blog-article">
-                        <img src="./assets/members/group.jpg" alt="">
-                        <h2>Team <span>'Sea Sakthi'</span> of Kumaraguru College of Technology</h2>
-                        <div class="blog-detail">
-                            <span>By The Hindu</span>
-                            <span>5 Min Read</span>
-                        </div>
-                        <p>The 16-member team is all set to travel to Europe for the one-of-a-kind motor boating event
-                            dedicated to promoting a sustainable future through alternative energy sources.</p>
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right"
-                                viewBox="0 0 24 24">
-                                <path d="M15 10l5 5-5 5" />
-                                <path d="M4 4v7a4 4 0 004 4h12" />
-                            </svg>
-                            See More
-                        </a>
-                    </div>
-                </div>
-                <div class="blog-header">
-                    <div class="blog-article header-article">
-                        <div class="blog-big__title"><span class="onlymobile">Eco &nbsp; </span>Friendly</div>
-                        <div class="blog-menu small-title date">12.06.2025</div>
-                    </div>
-                    <div class="blog-article">
-                        <img src="./assets/pictures/news3.webp" alt="">
-                        <h2>Kumaraguru's Team Sea Sakthi is all set to race at Monaco with their Energy Boat</h2>
-                        <div class="blog-detail">
-                            <span>By YourCoimbatore</span>
-                            <span>5 Min Read</span>
-                        </div>
-                        <p>A Team of 16 students from Kumaraguru College of Technology (KCT) Coimbatore are all set to
-                            travel to Monaco in Europe to take part in the Monaco Energy Boat Challenge 2025</p>
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right"
-                                viewBox="0 0 24 24">
-                                <path d="M15 10l5 5-5 5" />
-                                <path d="M4 4v7a4 4 0 004 4h12" />
-                            </svg>
-                            See More
-                        </a>
-                    </div>
-                </div>
-                <div class="blog-header">
-                    <div class="blog-article header-article">
-                        <div class="blog-big__title"><span class="onlymobile">Infinite &nbsp; </span>Savings</div>
-                        <div class="blog-menu small-title date">12.06.2025</div>
-                    </div>
-                    <div class="blog-article">
-                        <img src="./assets/pictures/news1.webp" alt="">
-                        <h2>Boat designed by Coimbatore college students to race at global contest</h2>
-                        <div class="blog-detail">
-                            <span>By Times Of India</span>
-                            <span>5 Min Read</span>
-                        </div>
-                        <p>COIMBATORE: Director of Centre for Indigenisation & Self Reliance (CISR),Indian Navy Cmde.B Balasundram unveiled Yali 4.0, a boat
-                            designed by a team of students form Kumaraguru College of Technology, at the college campus
-                            in the city on Wednesday.</p>
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right"
-                                viewBox="0 0 24 24">
-                                <path d="M15 10l5 5-5 5" />
-                                <path d="M4 4v7a4 4 0 004 4h12" />
-                            </svg>
-                            See More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-part right-blog">
-                <marquee width="100%" direction="left">
-                    <span>Yali 4.0 launching on 4 jun</span>
-                    <span>Balsa and Flax- Moving Towards Sustainability</span>
-                    <span>Only Indian team to participate</span>
-                </marquee>
-                <div class="blog-right-title-container">
-                    <div class="blog-right-title">
-                        Featured Articles
-                    </div>
-                    <div class="blog-menu rounded">See All</div>
-                </div>
-                <div class="blog-right">
-                    <div class="blog-right-container">
-                        <div class="blog-title-date">
-                            <div class="blog-right-page">1</div>
-                            <div class="date">08.06.2025</div>
-                        </div>
-                        <div class="blog-right-page-title">Boat designed by Coimbatore college students</div>
-                        <div class="blog-right-page-subtitle">Director of Centre for Indigenisation & Self Reliance (CISR),Indian Navy Cmde.B Balasundram </div>
-                    </div>
-                    <div class="blog-right-container">
-                        <div class="blog-title-date">
-                            <div class="blog-right-page">2</div>
-                            <div class="date">04.06.2025</div>
-                        </div>
-                        <div class="blog-right-page-title">Two men and a boat, India’s Team Sea Sakthi races in Monaco
-                            but for a local cause</div>
-                        <div class="blog-right-page-subtitle">A few weeks ago, a group of engineering students from
-                            Kumaraguru College of Technology, Coimbatore, weren't even sure if their 310-kg
-                            energy-efficient boat would stay...</div>
-                    </div>
-                    <div class="blog-right-container">
-                        <div class="blog-title-date">
-                            <div class="blog-right-page">3</div>
-                            <div class="date">02.06.2024</div>
-                        </div>
-                        <div class="blog-right-page-title">Team Sea Sakthi from India set to participate in 12th Monaco
-                            Energy Boat Challenge</div>
-                        <div class="blog-right-page-subtitle">Sea Sakthi, a 16-member contingent from Kumaraguru College
-                            of Technology (KCT), Coimbatore, India, will participate in the 11th Monaco...</div>
-                    </div>
-                    <div class="blog-right-container">
-                        <div class="blog-title-date">
-                            <div class="blog-right-page">4</div>
-                            <div class="date">10.05.2025</div>
-                        </div>
-                        <div class="blog-right-page-title">Team Sea Sakthi of Kumaraguru, the first ever Indian student
-                            team at the International</div>
-                        <div class="blog-right-page-subtitle">16 students from Kumaraguru College of Technology (KCT),
-                            Coimbatore aligning with the future-forward vision to promote alternate propulsion system in
-                            maritime mobility are...</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="about alumni-page" id="alumnipage"></div>
-    <div class="min-h-screen">
-        <header class="header">
-            <h1>ALUMNI NETWORK</h1>
-            <div class="header-line"></div>
-        </header>
-        
-        <main>
-            <section class="alumni-global">
-                <h2>ALUMNI ACROSS GLOBE</h2>
-                
-                <div class="alumni-grid">
-                    <!-- Global Alumni Cards -->
-                    <div class="alumni-card">
-                        <div class="card-content">
-                            <div class="image-container">
-                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Sarah Johnson">
-                            </div>
-                            <h3>Sarah Johnson</h3>
-                            <p>Google, San Francisco</p>
-                            <a href="https://linkedin.com/in/example" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                                LinkedIn
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Repeat for other global alumni -->
-                </div>
-            </section>
-            
-            <div class="past-members-toggle">
-                <button id="togglePastMembers" class="toggle-btn">
-                    View Past Members
-                </button>
-            </div>
-            
-            <section id="pastMembers" class="past-members hidden">
-                <h2>PAST MEMBERS</h2>
-                
-                <div class="batch-selector">
-                    <button class="batch-btn active" data-batch="yali1">Yali 1.0</button>
-                    <button class="batch-btn" data-batch="yali2">Yali 2.0</button>
-                    <button class="batch-btn" data-batch="yali3">Yali 3.0</button>
-                </div>
-                
-                <div id="yali1" class="batch-container">
-                    <div class="alumni-grid">
-                        <!-- Yali 1.0 Alumni Cards -->
-                        <div class="alumni-card">
-                            <div class="card-content">
-                                <div class="image-container">
-                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Mohan R">
-                                </div>
-                                <h3>Mohan R</h3>
-                                <p>Bosch</p>
-                                <a href="https://www.linkedin.com/in/mohan-ravi/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                                    LinkedIn
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Repeat for other Yali 1.0 alumni -->
-                    </div>
-                </div>
-                
-                <div id="yali2" class="batch-container">
-                    <div class="alumni-grid">
-                        <!-- Yali 2.0 Alumni Cards -->
-                        <div class="alumni-card">
-                            <div class="card-content">
-                                <div class="image-container">
-                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Mohan R">
-                                </div>
-                                <h3>Gerontius Leo L</h3>
-                                <p>Chalmers University</p>
-                                <a href="https://www.linkedin.com/in/mohan-ravi/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                                    LinkedIn
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Repeat for other Yali 1.0 alumni -->
-                    </div>
-                </div>
-
-                <div id="yali3" class="batch-container">
-                    <div class="alumni-grid">
-                        <!-- Yali 3.0 Alumni Cards -->
-                        <div class="alumni-card">
-                            <div class="card-content">
-                                <div class="image-container">
-                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Mohan R">
-                                </div>
-                                <h3>Yuga Barathi</h3>
-                                <p>Mechatronics Engineering</p>
-                                <a href="https://www.linkedin.com/in/mohan-ravi/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                                    LinkedIn
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Repeat for other Yali 1.0 alumni -->
-                    </div>
-                </div>
-                
-                <!-- Repeat for Yali 2.0 and 3.0 with different IDs -->
-            </section>
-        </main>
-    </div>
-</div>
-
-    <div class="pages about" id="sponsorspage">
-        <div class='c'>
-            <div class='p'>
-                <div class='sponsorsFooter'>
-                    <h1><strong id="sponsorTitle" data-default-title="<strong>Our Sponsors</strong>">Our
-                            Sponsors</strong></h1>
-                    <ul>
-                        <span data-group-title="Platinum Sponsor">
-                        </span>
-                        <span data-group-title="Gold Sponsor">
-                            <li><img src="./assets/logo/SBM.png"></li>
-                            <li><img src="./assets/logo/thriveni.png"></li>
-                            <li><img src="./assets/logo/THRIVENI SAINIK.png"></li>
-                        </span>
-                        <span data-group-title="Silver Sponsors">
-                            <li><img src="./assets/logo/cosmos.png"></li>
-                            <li><img src="./assets/logo/quench.png"></li>
-                            <li><img src="./assets/logo/ador.png"></li>
-                            <li><img src="./assets/logo/legrand.png"></li>
-                        </span>
-                        <span data-group-title="Bronze Sponsors">
-                            <li><img src="./assets/logo/ROOTS.png"></li>
-                            <li><img src="./assets/logo/janatics.png"></li>
-                            <li><img src="./assets/logo/IND OIL.png"></li>
-                        </span>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="pages footer" style="height: fit-content;" id="contactpage">
-        <div class="Footer_bottom__0_op5">
-            <div class="Footer_navs__xdUaS">
-                <div class="Footer_nav__CN4v9">
-                    <div class="Nav_root___T4Je">
-                        <div class="Nav_title__zQ82V">Discover</div>
-                        <ul>
-                            <li><a class="Nav_link__Z_4dF Button_root__PHG_o"
-                                    href="https://teamseasakthi.blogspot.com">Blog<!-- --></a></li>
-                            <li><a class="Nav_link__Z_4dF Button_root__PHG_o" href="./assets/brochure.pdf"
-                                    download>Brochure</a></li>
-                            <li><a class="Nav_link__Z_4dF Button_root__PHG_o"
-                                    href="https://energyboatchallenge.com/">Challenge<!-- --></a></li>
-                            <li><a class="Nav_link__Z_4dF Button_root__PHG_o"
-                                    href="https://milaap.org/fundraisers/support-team-sea-sakthi-3/deeplink?deeplink_type=paytm">Crowdfunding<!-- --></a>
-                            </li>
-                            <li><a class="Nav_link__Z_4dF Button_root__PHG_o"
-                                    href="https://kct.ac.in">Institution<!-- --></a>
-                            </li>
-                            <li style="display: hidden;"><a id="crowdfunding-btn"
-                                    data-micromodal-trigger="crowdfunding"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="Footer_nav__CN4v9">
-                    <div class="Nav_root___T4Je">
-                        <div class="Nav_title__zQ82V">Social</div>
-                        <ul>
-                            <li><a href="https://in.linkedin.com/in/team-sea-sakthi-kct-564bbb22a"
-                                    rel="noopener noreferrer" target="_blank"
-                                    class="Nav_link__Z_4dF Button_root__PHG_o"><i class="fab fa-linkedin"></i>
-                                    Linkedin<!-- --></a></li>
-                            <li><a href="https://www.instagram.com/teamseasakthi/" rel="noopener noreferrer"
-                                    target="_blank" class="Nav_link__Z_4dF Button_root__PHG_o"><i
-                                        class="fab fa-instagram"></i> Instagram<!-- --></a>
-                            </li>
-                            <li><a href="https://twitter.com/teamseasakthi?lang=en" rel="noopener noreferrer"
-                                    target="_blank" class="Nav_link__Z_4dF Button_root__PHG_o">X (Twitter)<!-- --></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="Footer_nav__CN4v9">
-                    <div class="Nav_root___T4Je">
-                        <div class="Nav_title__zQ82V">Info</div>
-                        <ul>
-                            <li><a class="Nav_link__Z_4dF Button_root__PHG_o" href="/">Privacy Policy<!-- --></a>
-                            </li>
-                            <li><a class="Nav_link__Z_4dF Button_root__PHG_o" href="/">Terms of service<!-- --></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="Footer_form__0OJLj">
-                <form class="ContactForm_root__iMvfX" novalidate="">
-                    <div
-                        class="ContactForm_title__cdhIb Text_size-none__r1ChI Text_transform-capitalize__URFN6 Text_color-none___8hCU Text_weight-normal__8H1Zm">
-                        Stay up to date with all the latest Sea Sakthi news</div>
-                    <div class="ContactForm_body__xg31C">
-                        <div class="ContactForm_target__w3Hu4"><input name="email" type="input"
-                                class="Input_root__z6aSH ContactForm_input__26zAn" placeholder="Your Email Here"
-                                value=""><button aria-label="submit form" type="submit"
-                                class="ContactForm_btn__lE08Z Button_root__PHG_o"><svg viewBox="0 0 62 52"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M29.5022 47.6948L34.0415 51.8852L61.9258 26.1437L34.0415 0.402134L29.5022 4.59261L49.6048 23.1505L0.969421 23.1505L0.96942 29.1369L49.6048 29.1369L29.5022 47.6948Z"
-                                        fill="currentColor"></path>
-                                </svg></button></div>
-                    </div>
-                    <div
-                        class="ContactForm_text__YceAh ContactForm_text__darkgrey Text_size-none__r1ChI Text_color-none___8hCU Text_weight-normal__8H1Zm">
-                        <span>*By submitting, the data provided will be used to perform your request according to
-                            the<!-- --> <!-- --><a class="Button_root__PHG_o Button_hover-opacity__lcSQb color-inherit"
-                                href="/privacy">Privacy Policy<!-- --></a></span>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="Footer_bottom__contact">
-            <div>
-                <!--<h2 style="font-weight: 400;">Get in Touch</h2>-->
-                <i class="fa fa-map"></i>&nbsp;KCT Garage,<Br>Kumraguru College of
-                Technology,<br>Coimbatore,<br>Tamilnadu, India. 🇮🇳<br>Phone: +91 75300 09152
-            </div>
-        </div>
-
-        <div class="Copyright_root__drqAN Text_size-p-sm__v0Ub6 Text_color-none___8hCU Text_weight-normal__8H1Zm">
-            <div class="Copyright_item__DACw_">Sea Sakthi ©<!-- -->2024<!-- --></div>
-            <div class="Copyright_item__DACw_"> all rights reserved</div>
-            <div class="Copyright_item__DACw_"><button class="BackToTop_root__6VMhE Button_root__PHG_o"><span>Back to
-                        Top</span>
-                    </svg></button></div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/fullscreen/lg-fullscreen.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-    <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
