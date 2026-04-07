@@ -424,4 +424,15 @@ p{margin-bottom:1.62em}
   .hero-dark__btns{flex-direction:column}
   .hero-dark__btns .btn{width:100%;justify-content:center}
   .stat strong{font-size:32px}
+  .sponsors-carousel__track img{max-height:40px}
 }
+
+/* ================================================
+   SPONSORS CAROUSEL
+   ================================================ */
+.sponsors-carousel{background:#0a0a0a;padding:60px 0 50px;overflow:hidden}
+.sponsors-carousel .sec__head h6{color:rgba(255,255,255,.5)}
+.sponsors-carousel__track{display:flex;align-items:center;gap:60px;white-space:nowrap;animation:sponsors-scroll 30s linear infinite;width:max-content}
+.sponsors-carousel__track img{max-height:55px;width:auto;object-fit:contain;opacity:.7;transition:opacity .3s}
+.sponsors-carousel__track img:hover{opacity:1}
+@keyframes sponsors-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
