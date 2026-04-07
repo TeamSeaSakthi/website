@@ -13,6 +13,19 @@
 </head>
 <body>
 
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <svg class="page-loader__boat" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 38 L40 38 L70 38 L60 48 L20 48 Z" fill="#2B5EA7"/>
+      <path d="M40 38 L40 10 L55 30 L40 30 Z" fill="#ffffff" opacity=".9"/>
+      <path d="M40 14 L40 30 L28 30 Z" fill="#ffffff" opacity=".6"/>
+      <line x1="40" y1="8" x2="40" y2="38" stroke="#ffffff" stroke-width="1.5"/>
+      <path d="M18 45 Q25 42 32 45 Q39 48 46 45 Q53 42 60 45" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="none"/>
+    </svg>
+    <span class="page-loader__text">Sea Sakthi</span>
+    <div class="page-loader__bar"><div class="page-loader__fill"></div></div>
+  </div>
+
   <!-- HEADER -->
   <header class="site-header">
     <a href="index.html" class="header-logo"><img src="./assets/logo.png" alt="Sea Sakthi"></a>
@@ -99,8 +112,7 @@
         <h6>About Team Sea Sakthi</h6>
         <h2>India's first &amp; only energy boat team at the Monaco Energy Boat Challenge</h2>
       </div>
-      <div class="cols">
-        <div class="cols__left">
+      <div class="svc-grid">
           <div class="svc anim-up">
             <span class="svc__num">01</span>
             <h3>Precision Propulsion</h3>
@@ -119,12 +131,6 @@
             <p>Cutting-edge AR glasses providing pilots 360-degree awareness with real-time speed, navigation, and warning data overlay.</p>
             <a href="boats.html" class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></a>
           </div>
-        </div>
-        <div class="cols__right anim-up">
-          <img src="./assets/2024/photo9.jpg" alt="Team at work" class="cols__img">
-          <img src="./assets/2024/photo3.jpg" alt="Boat testing" class="cols__img">
-          <img src="./assets/pictures/monaco_Drive.jpg" alt="Monaco" class="cols__img">
-        </div>
       </div>
     </div>
   </section>
@@ -152,7 +158,7 @@
       </div>
       <div class="accordion anim-up">
         <a href="boats.html" class="accordion__item">
-          <img src="./assets/2024/photo7.jpg" alt="Yali 5.0">
+          <img src="./assets/2026/yali5.0.jpeg" alt="Yali 5.0">
           <div class="accordion__info">
             <h4>Yali 5.0</h4>
             <p>Next Gen &middot; MEBC 2026 &middot; Coming Soon</p>
@@ -179,6 +185,13 @@
             <p>Hydrogen Fuel Cell &middot; 260 kg &middot; 14 knots &middot; 2023</p>
           </div>
         </a>
+        <a href="boats.html" class="accordion__item">
+          <img src="./assets/2024/photo12.JPG" alt="Yali 1.0">
+          <div class="accordion__info">
+            <h4>Yali 1.0</h4>
+            <p>The Pioneer &middot; MEBC Debut &middot; 2022</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -187,7 +200,7 @@
   <section class="sec sec--cream">
     <div class="container">
       <div class="sec__head text-center anim-up">
-        <h2 style="text-align: left;">Our Patrons</h2>
+        <h2>Our Patrons</h2>
       </div>
       <div class="patrons-grid anim-up">
         <div class="patron-card">

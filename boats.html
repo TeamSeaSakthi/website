@@ -11,6 +11,19 @@
 </head>
 <body>
 
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <svg class="page-loader__boat" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 38 L40 38 L70 38 L60 48 L20 48 Z" fill="#2B5EA7"/>
+      <path d="M40 38 L40 10 L55 30 L40 30 Z" fill="#ffffff" opacity=".9"/>
+      <path d="M40 14 L40 30 L28 30 Z" fill="#ffffff" opacity=".6"/>
+      <line x1="40" y1="8" x2="40" y2="38" stroke="#ffffff" stroke-width="1.5"/>
+      <path d="M18 45 Q25 42 32 45 Q39 48 46 45 Q53 42 60 45" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="none"/>
+    </svg>
+    <span class="page-loader__text">Sea Sakthi</span>
+    <div class="page-loader__bar"><div class="page-loader__fill"></div></div>
+  </div>
+
   <!-- ========== HEADER ========== -->
   <header class="site-header">
     <a href="index.html" class="header-logo"><img src="./assets/logo.png" alt="Sea Sakthi"></a>
@@ -119,76 +132,86 @@
       <div class="sec__head text-center">
         <h2 class="anim-up">Previous Editions</h2>
       </div>
-      <div class="grid grid-2">
+      <div class="edition-slider">
+        <div class="edition-slider__track">
 
-        <!-- Yali 4.0 -->
-        <div class="edition-card anim-up">
-          <img src="./assets/yali4.jpg" alt="Yali 4.0" class="edition-img">
-          <div class="edition-body">
-            <span class="edition-tag">2025</span>
-            <h3>Yali 4.0</h3>
-            <p class="edition-desc">15 kW axial flux motor, Balsa-Flax composite cockpit, AR navigation glasses, IP67-rated PDU.</p>
-            <div class="spec-table">
-              <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Axial Flux Motor</span></div>
-              <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">260 kg</span></div>
-              <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">18+ knots</span></div>
-              <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">Indigenous LFP Battery</span></div>
-              <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">MEBC 2025, AR Navigation Pioneer</span></div>
+          <!-- Yali 4.0 -->
+          <div class="edition-card">
+            <img src="./assets/yali4.jpg" alt="Yali 4.0" class="edition-img">
+            <div class="edition-body">
+              <span class="edition-tag">2025</span>
+              <h3>Yali 4.0</h3>
+              <p class="edition-desc">15 kW axial flux motor, Balsa-Flax composite cockpit, AR navigation glasses, IP67-rated PDU.</p>
+              <div class="spec-table">
+                <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Axial Flux Motor</span></div>
+                <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">260 kg</span></div>
+                <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">18+ knots</span></div>
+                <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">Indigenous LFP Battery</span></div>
+                <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">MEBC 2025, AR Navigation Pioneer</span></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Yali 3.0 -->
-        <div class="edition-card anim-up">
-          <img src="./assets/yali3.png" alt="Yali 3.0" class="edition-img">
-          <div class="edition-body">
-            <span class="edition-tag">2024</span>
-            <h3>Yali 3.0</h3>
-            <p class="edition-desc">Twin propulsion system, pineapple fiber monocoque structure, indigenous LFP battery pack.</p>
-            <div class="spec-table">
-              <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Duo Prop</span></div>
-              <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">260 kg</span></div>
-              <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">16 knots</span></div>
-              <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">Indigenous LFP Battery</span></div>
-              <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">MEBC 2024 Participant</span></div>
+          <!-- Yali 3.0 -->
+          <div class="edition-card">
+            <img src="./assets/yali3.png" alt="Yali 3.0" class="edition-img">
+            <div class="edition-body">
+              <span class="edition-tag">2024</span>
+              <h3>Yali 3.0</h3>
+              <p class="edition-desc">Twin propulsion system, pineapple fiber monocoque structure, indigenous LFP battery pack.</p>
+              <div class="spec-table">
+                <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Duo Prop</span></div>
+                <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">260 kg</span></div>
+                <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">16 knots</span></div>
+                <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">Indigenous LFP Battery</span></div>
+                <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">MEBC 2024 Participant</span></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Yali 2.0 -->
-        <div class="edition-card anim-up">
-          <img src="./assets/yali2.png" alt="Yali 2.0" class="edition-img">
-          <div class="edition-body">
-            <span class="edition-tag">2023</span>
-            <h3>Yali 2.0</h3>
-            <p class="edition-desc">India's first hydrogen-powered boat with carbon fibre monocoque structure.</p>
-            <div class="spec-table">
-              <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Single Prop</span></div>
-              <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">260 kg</span></div>
-              <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">14 knots</span></div>
-              <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">Hydrogen Fuel Cell</span></div>
-              <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">6th Global, Communication Prize x2, Monaco Townhall Cup</span></div>
+          <!-- Yali 2.0 -->
+          <div class="edition-card">
+            <img src="./assets/yali2.png" alt="Yali 2.0" class="edition-img">
+            <div class="edition-body">
+              <span class="edition-tag">2023</span>
+              <h3>Yali 2.0</h3>
+              <p class="edition-desc">India's first hydrogen-powered boat with carbon fibre monocoque structure.</p>
+              <div class="spec-table">
+                <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Single Prop</span></div>
+                <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">260 kg</span></div>
+                <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">14 knots</span></div>
+                <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">Hydrogen Fuel Cell</span></div>
+                <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">6th Global, Communication Prize x2, Monaco Townhall Cup</span></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Yali 1.0 -->
-        <div class="edition-card anim-up">
-          <img src="./assets/yaliv1.png" alt="Yali 1.0" class="edition-img">
-          <div class="edition-body">
-            <span class="edition-tag">2022</span>
-            <h3>Yali 1.0</h3>
-            <p class="edition-desc">India's pioneering energy boat — aluminium fabricated cockpit with solar-powered systems.</p>
-            <div class="spec-table">
-              <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Single Prop</span></div>
-              <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">290 kg</span></div>
-              <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">11 knots</span></div>
-              <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">9.6 kWh Li-Ion + 400W Solar</span></div>
-              <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">6th Global, Communication Prize</span></div>
+          <!-- Yali 1.0 -->
+          <div class="edition-card">
+            <img src="./assets/yaliv1.png" alt="Yali 1.0" class="edition-img">
+            <div class="edition-body">
+              <span class="edition-tag">2022</span>
+              <h3>Yali 1.0</h3>
+              <p class="edition-desc">India's pioneering energy boat — aluminium fabricated cockpit with solar-powered systems.</p>
+              <div class="spec-table">
+                <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">Single Prop</span></div>
+                <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">290 kg</span></div>
+                <div class="spec-row"><span class="spec-label">Max Speed</span><span class="spec-value">11 knots</span></div>
+                <div class="spec-row"><span class="spec-label">Power</span><span class="spec-value">9.6 kWh Li-Ion + 400W Solar</span></div>
+                <div class="spec-row"><span class="spec-label">Achievement</span><span class="spec-value">6th Global, Communication Prize</span></div>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
+        <div class="edition-slider__nav">
+          <button class="edition-slider__btn edition-slider__btn--prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="edition-slider__btn edition-slider__btn--next" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>

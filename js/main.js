@@ -1,3 +1,9 @@
+// ---- Page Loader ----
+window.addEventListener('load', () => {
+  const loader = document.getElementById('pageLoader');
+  if (loader) setTimeout(() => loader.classList.add('loaded'), 400);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
   const G = typeof gsap !== 'undefined';
@@ -338,6 +344,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Back to top ----
   const btt = document.querySelector('.back-to-top');
   if (btt) btt.onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
+
+  // ---- Edition slider ----
+  const sliderTrack = document.querySelector('.edition-slider__track');
+  const prevBtn = document.querySelector('.edition-slider__btn--prev');
+  const nextBtn = document.querySelector('.edition-slider__btn--next');
+  if (sliderTrack && prevBtn && nextBtn) {
+    const getCardWidth = () => sliderTrack.querySelector('.edition-card').offsetWidth + 30;
+    prevBtn.onclick = () => sliderTrack.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+    nextBtn.onclick = () => sliderTrack.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+  }
 
   // ---- Smooth anchor ----
   document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {

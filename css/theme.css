@@ -12,7 +12,7 @@
   --title:#181817;--text:#494945;--meta:#7A7A74;--border:#DDDBD8;
   --dark:#0C1B3A;--dark2:#0F2248;--dark-t:#FCFBF8;--dark-p:#B7B7B7;
   --ff:'DM Sans',sans-serif;--fh:'Plus Jakarta Sans',sans-serif;
-  --mw:1290px;--pad:70px;--sp:10rem;
+  --mw:1290px;--pad:70px;--sp:6rem;
 }
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -170,7 +170,8 @@ p{margin-bottom:1.62em}
    ================================================ */
 .sec{padding:var(--sp) 0}
 .sec--cream{background:var(--bg2)}
-.sec__head{max-width:800px;margin-bottom:80px}
+.sec__head{max-width:800px;margin-bottom:50px}
+.sec__head.text-center{margin-left:auto;margin-right:auto}
 .sec__head h6{color:var(--meta);font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;font-weight:500}
 .sec__head h2{margin-top:0}
 .sec__sub{color:var(--meta);font-weight:400;max-width:580px;margin-top:10px}
@@ -180,6 +181,9 @@ p{margin-bottom:1.62em}
 .cols__left{display:flex;flex-direction:column;gap:50px}
 .cols__right{display:flex;flex-direction:column;gap:var(--gap,30px)}
 .cols__img{width:100%;height:340px;object-fit:cover;border-radius:26px}
+
+/* Service grid (text-only 3-col layout) */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 
 /* Service card */
 .svc{padding-bottom:50px;border-bottom:1px solid var(--border);position:relative}
@@ -242,9 +246,9 @@ p{margin-bottom:1.62em}
 /* ================================================
    PAGE HERO (inner pages)
    ================================================ */
-.page-hero{padding:180px 0 100px;background:var(--bg)}
+.page-hero{padding:140px 0 60px;background:var(--bg);text-align:center}
 .page-hero h1{margin-bottom:16px}
-.page-hero p{color:var(--meta);max-width:560px;font-size:18px}
+.page-hero p{color:var(--meta);max-width:560px;font-size:18px;margin-left:auto;margin-right:auto}
 
 /* ================================================
    SHARED COMPONENTS (other pages)
@@ -267,6 +271,15 @@ p{margin-bottom:1.62em}
 .feature-card .icon svg{width:22px;height:22px}
 .feature-card h4{font-size:20px;margin-bottom:12px}
 .feature-card p{color:var(--meta);font-size:15px;margin:0}
+
+/* Edition slider */
+.edition-slider{position:relative}
+.edition-slider__track{display:flex;gap:30px;overflow:hidden;scroll-behavior:smooth}
+.edition-slider__track .edition-card{min-width:calc(50% - 15px);flex-shrink:0;transition:transform .4s ease,opacity .4s ease}
+.edition-slider__nav{display:flex;gap:12px;justify-content:center;margin-top:30px}
+.edition-slider__btn{width:50px;height:50px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.edition-slider__btn:hover{background:var(--link);border-color:var(--link);color:#fff}
+.edition-slider__btn svg{width:20px;height:20px}
 
 .edition-card{background:var(--bg);border-radius:26px;overflow:hidden;border:1px solid var(--border)}
 .edition-card .edition-img{width:100%;height:280px;object-fit:cover}
@@ -383,6 +396,7 @@ p{margin-bottom:1.62em}
   .header-nav,.header-cta{display:none}
   .hamburger{display:flex}
   .cols{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
   .team-row,.team-grid{grid-template-columns:repeat(2,1fr)}
   .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
   .accordion{flex-direction:column;height:auto}
@@ -412,8 +426,9 @@ p{margin-bottom:1.62em}
   .footer__grid{grid-template-columns:1fr;gap:30px}
   .footer__bottom{flex-direction:column;gap:16px;text-align:center}
   .grid-2{grid-template-columns:1fr}
+  .edition-slider__track .edition-card{min-width:100%}
   .mobile-menu a{font-size:24px}
-  .page-hero{padding:120px 0 60px}
+  .page-hero{padding:100px 0 40px}
   .cols__img{height:240px}
 }
 @media(max-width:480px){
@@ -436,3 +451,18 @@ p{margin-bottom:1.62em}
 .sponsors-carousel__track img{max-height:55px;width:auto;object-fit:contain;opacity:.7;transition:opacity .3s}
 .sponsors-carousel__track img:hover{opacity:1}
 @keyframes sponsors-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ================================================
+   PAGE LOADER — Boat Animation
+   ================================================ */
+.page-loader{position:fixed;inset:0;z-index:9999;background:var(--dark);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}
+.page-loader.loaded{opacity:0;visibility:hidden;pointer-events:none}
+.page-loader__boat{width:80px;animation:boat-rock 1.2s ease-in-out infinite}
+.page-loader__wave{width:120px;margin-top:-8px;opacity:.5}
+.page-loader__wave path{animation:wave-move 1s ease-in-out infinite}
+.page-loader__text{margin-top:20px;font-family:var(--fh);font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.page-loader__bar{width:120px;height:3px;background:rgba(255,255,255,.1);border-radius:3px;margin-top:14px;overflow:hidden}
+.page-loader__fill{height:100%;width:0;background:var(--link);border-radius:3px;animation:loader-fill 1.2s ease-out forwards}
+@keyframes boat-rock{0%,100%{transform:translateY(0) rotate(0deg)}25%{transform:translateY(-6px) rotate(-4deg)}75%{transform:translateY(2px) rotate(3deg)}}
+@keyframes wave-move{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+@keyframes loader-fill{0%{width:0}100%{width:100%}}
