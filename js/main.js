@@ -353,6 +353,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const getCardWidth = () => sliderTrack.querySelector('.edition-card').offsetWidth + 30;
     prevBtn.onclick = () => sliderTrack.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
     nextBtn.onclick = () => sliderTrack.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+    // Touch / trackpad swipe support
+    let touchStartX = 0;
+    sliderTrack.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    sliderTrack.addEventListener('touchend', e => {
+      const dx = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(dx) > 40) sliderTrack.scrollBy({ left: dx > 0 ? getCardWidth() : -getCardWidth(), behavior: 'smooth' });
+    }, { passive: true });
   }
 
   // ---- Smooth anchor ----

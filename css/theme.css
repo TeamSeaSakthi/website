@@ -276,8 +276,8 @@ p{margin-bottom:1.62em}
 .edition-slider{position:relative}
 .edition-slider__track{display:flex;gap:30px;overflow:hidden;scroll-behavior:smooth}
 .edition-slider__track .edition-card{min-width:calc(50% - 15px);flex-shrink:0;transition:transform .4s ease,opacity .4s ease}
-.edition-slider__nav{display:flex;gap:12px;justify-content:center;margin-top:30px}
-.edition-slider__btn{width:50px;height:50px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.edition-slider__nav{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);display:flex;justify-content:space-between;padding:0 16px;z-index:2;pointer-events:none}
+.edition-slider__btn{pointer-events:all;width:50px;height:50px;border-radius:50%;border:1px solid var(--border);background:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;box-shadow:0 4px 16px rgba(0,0,0,.1)}
 .edition-slider__btn:hover{background:var(--link);border-color:var(--link);color:#fff}
 .edition-slider__btn svg{width:20px;height:20px}
 
