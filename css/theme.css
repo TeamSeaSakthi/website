@@ -450,7 +450,7 @@ p{margin-bottom:1.62em}
 .sponsors-track-wrap:hover .sponsors-track{animation-play-state:paused}
 .sponsor-logo{flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:20px 28px;border:1px solid var(--border);border-radius:14px;background:#fff;transition:border-color .3s,box-shadow .3s}
 .sponsor-logo:hover{border-color:var(--link);box-shadow:0 4px 20px rgba(0,0,0,.07)}
-.sponsor-logo img{max-height:44px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .3s,opacity .3s}
+.sponsor-logo img{max-height:64px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .3s,opacity .3s}
 .sponsor-logo:hover img{filter:grayscale(0);opacity:1}
 @keyframes sponsors-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
