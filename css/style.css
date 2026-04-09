@@ -500,11 +500,11 @@ body {
 }
 
 .blog-card--1 .blog-card__img, .blog-card--1 .blog-card__img--hover {
-    background-image: url('../assets/pictures/celebration.jpg');
+    background-image: url('../assets/pictures/celebration.webp');
 }
 
 .blog-card--2 .blog-card__img, .blog-card--2 .blog-card__img--hover {
-    background-image: url('../assets/pictures/monaco_Drive.jpg');
+    background-image: url('../assets/pictures/monaco_Drive.webp');
 }
 
 .blog-card__clock {
@@ -1598,7 +1598,7 @@ body {
 }
 
 .magnification .mag-content .mag-section.hero {
-    background-image: url('../assets/pineapple.png');
+    background-image: url('../assets/pineapple.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3739,7 +3739,7 @@ body {
 }
 
 .magnification .mag-content .mag-section.hero {
-    background-image: url('../assets/pineapple.png');
+    background-image: url('../assets/pineapple.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -5160,7 +5160,7 @@ h2 {
     }
 
     .mag-img {
-        content: url(../assets/blue-mag-mob.png);
+        content: url(../assets/blue-mag-mob.webp);
     }
 
 
